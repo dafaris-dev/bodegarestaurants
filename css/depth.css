@@ -1,0 +1,313 @@
+/* =========================================================
+   Bodega SF — 3D Depth System
+   Additive layer on top of styles.css for professional 3D feel
+   ========================================================= */
+
+:root {
+  --shadow-xs: 0 2px 6px rgba(20,18,16,.06), 0 1px 2px rgba(20,18,16,.08);
+  --shadow-sm: 0 8px 18px -8px rgba(20,18,16,.14), 0 4px 10px -6px rgba(20,18,16,.08);
+  --shadow-md: 0 24px 50px -18px rgba(20,18,16,.28), 0 10px 24px -12px rgba(20,18,16,.14);
+  --shadow-lg: 0 45px 90px -30px rgba(20,18,16,.45), 0 20px 50px -22px rgba(20,18,16,.22);
+  --shadow-glow-accent: 0 30px 80px -20px rgba(142,46,46,.55);
+  --shadow-glow-gold:   0 30px 80px -20px rgba(184,140,74,.4);
+  --depth-ease: cubic-bezier(.19,1,.22,1);
+}
+
+html { background: #0b0a09; }
+body { background: var(--paper); }
+
+/* ---------- Scene perspective ---------- */
+.scene { perspective: 1800px; perspective-origin: 50% 40%; }
+.scene-item { transform-style: preserve-3d; will-change: transform; }
+
+/* ---------- Hero 3D composition ---------- */
+.hero { perspective: 1500px; perspective-origin: 50% 50%; }
+
+.hero .bg {
+  transform: translateZ(0);
+}
+
+.hero .orb {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  filter: blur(60px);
+  opacity: .55;
+  will-change: transform;
+  transition: transform .4s var(--depth-ease);
+}
+.hero .orb.o1 { width: 520px; height: 520px; background: radial-gradient(circle, #b8864a, transparent 70%); top: 10%; left: -10%; }
+.hero .orb.o2 { width: 420px; height: 420px; background: radial-gradient(circle, #8e2e2e, transparent 70%); bottom: 10%; right: -5%; }
+.hero .orb.o3 { width: 300px; height: 300px; background: radial-gradient(circle, #d7c9b0, transparent 70%); top: 40%; right: 25%; opacity: .3; }
+
+.hero .plate-3d {
+  position: absolute;
+  right: -5%;
+  top: 18%;
+  width: 46vw;
+  max-width: 760px;
+  aspect-ratio: 1;
+  pointer-events: none;
+  transform-style: preserve-3d;
+  will-change: transform;
+  animation: float 7s ease-in-out infinite;
+}
+.hero .plate-3d svg,
+.hero .plate-3d img { width: 100%; height: 100%; filter: drop-shadow(0 50px 70px rgba(0,0,0,.6)); }
+@keyframes float {
+  0%, 100% { transform: translateY(0) rotateX(10deg) rotateZ(-6deg); }
+  50% { transform: translateY(-18px) rotateX(12deg) rotateZ(-4deg); }
+}
+@media (max-width: 820px){ .hero .plate-3d { opacity: .35; right: -25%; top: 30%; } }
+
+.hero .content { transform-style: preserve-3d; }
+.hero h1 { text-shadow: 0 20px 60px rgba(0,0,0,.5); transform: translateZ(40px); }
+.hero .meta { transform: translateZ(20px); }
+.hero .ctas { transform: translateZ(50px); }
+
+/* ---------- Quick bar depth ---------- */
+.quick-bar {
+  position: relative;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.04), 0 20px 40px -20px rgba(0,0,0,.6);
+  background: linear-gradient(180deg, #1b1612 0%, #141210 100%);
+}
+.quick-bar a {
+  position: relative;
+  transition: transform .4s var(--depth-ease), background .3s var(--depth-ease);
+}
+.quick-bar a::before {
+  content:""; position:absolute; inset: 0;
+  background: linear-gradient(180deg, rgba(184,140,74,.18), transparent 60%);
+  opacity: 0; transition: opacity .4s var(--depth-ease);
+}
+.quick-bar a:hover::before { opacity: 1; }
+.quick-bar a:hover { transform: translateY(-2px); }
+
+/* ---------- Floating cards ---------- */
+.story .frame,
+.story .reveal + .frame { box-shadow: var(--shadow-lg); }
+
+.menu-note,
+.menu-source {
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow .5s var(--depth-ease), transform .5s var(--depth-ease);
+}
+.menu-note:hover, .menu-source:hover { box-shadow: var(--shadow-md); transform: translateY(-3px); }
+
+/* ---------- 3D tilt on cards ---------- */
+.tilt {
+  transform-style: preserve-3d;
+  transition: transform .5s var(--depth-ease), box-shadow .5s var(--depth-ease);
+  will-change: transform;
+}
+.tilt > * { transform: translateZ(30px); }
+
+/* Press cards */
+.press-card {
+  box-shadow: var(--shadow-sm);
+  transition: all .5s var(--depth-ease);
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+.press-card:hover { box-shadow: var(--shadow-lg); }
+.press-card > * { transition: transform .5s var(--depth-ease); }
+.press-card:hover h3 { transform: translateZ(30px); }
+.press-card:hover .pub { transform: translateZ(20px); }
+.press-card:hover .read { transform: translateZ(25px); }
+
+/* Policy cards */
+.policy-card {
+  position: relative;
+  box-shadow: var(--shadow-sm);
+  transition: transform .5s var(--depth-ease), box-shadow .5s var(--depth-ease);
+}
+.policy-card::before {
+  content:""; position:absolute; inset: 0;
+  background: linear-gradient(135deg, rgba(184,140,74,.08), transparent 60%);
+  opacity: 0; transition: opacity .4s var(--depth-ease); pointer-events: none;
+}
+.policy-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-md); }
+.policy-card:hover::before { opacity: 1; }
+
+/* Gallery tiles — 3D hover */
+.gallery .tile {
+  box-shadow: var(--shadow-sm);
+  transform-style: preserve-3d;
+  transition: transform .6s var(--depth-ease), box-shadow .6s var(--depth-ease);
+}
+.gallery .tile:hover { box-shadow: var(--shadow-lg); }
+
+/* Shop card lift */
+.shop-card {
+  box-shadow: var(--shadow-md);
+  transform-style: preserve-3d;
+  transition: transform .6s var(--depth-ease), box-shadow .6s var(--depth-ease);
+}
+.shop-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); }
+
+/* ---------- Buttons: 3D depth ---------- */
+.btn {
+  position: relative;
+  box-shadow: 0 6px 14px -4px rgba(20,18,16,.3), inset 0 1px 0 rgba(255,255,255,.08);
+  transform: translateZ(0);
+  transition: all .35s var(--depth-ease);
+}
+.btn:hover {
+  box-shadow: 0 14px 28px -8px rgba(142,46,46,.5), inset 0 1px 0 rgba(255,255,255,.12);
+  transform: translateY(-2px) translateZ(0);
+}
+.btn:active { transform: translateY(0) translateZ(0); box-shadow: 0 4px 8px -2px rgba(20,18,16,.4); }
+
+.btn.accent {
+  background: linear-gradient(180deg, #a63535 0%, #8e2e2e 50%, #6e1e1e 100%);
+}
+.btn.ghost.light {
+  backdrop-filter: blur(10px);
+  background: rgba(255,255,255,.04);
+}
+.btn.ghost.light:hover {
+  background: rgba(255,255,255,.95);
+}
+
+/* ---------- Navigation glass ---------- */
+.nav.scrolled {
+  background: rgba(246,241,231,.78);
+  backdrop-filter: blur(18px) saturate(140%);
+  -webkit-backdrop-filter: blur(18px) saturate(140%);
+  box-shadow: 0 10px 30px -20px rgba(20,18,16,.3);
+}
+
+/* ---------- Menu dish rows ---------- */
+.dish {
+  padding-left: .5rem; padding-right: .5rem;
+  border-radius: 2px;
+  transition: background .3s var(--depth-ease), transform .3s var(--depth-ease);
+}
+.dish:hover {
+  background: rgba(142,46,46,.04);
+  transform: translateX(4px);
+}
+.dish .price {
+  text-shadow: 0 1px 0 rgba(255,255,255,.4);
+}
+
+/* Billy callout glow */
+.billy-callout {
+  position: relative;
+  box-shadow: var(--shadow-md), inset 0 1px 0 rgba(255,255,255,.05);
+  background: linear-gradient(135deg, #1b1511 0%, #141210 60%, #0f0d0b 100%);
+}
+.billy-callout::after {
+  content:""; position:absolute; inset: -1px;
+  background: linear-gradient(135deg, rgba(184,140,74,.4), transparent 40%, rgba(142,46,46,.3));
+  opacity: .3; z-index: -1; pointer-events: none;
+}
+
+/* ---------- Section depth layering ---------- */
+.story { position: relative; }
+.story::before {
+  content:""; position: absolute; top: -1px; left: 0; right: 0; height: 60px;
+  background: linear-gradient(180deg, rgba(0,0,0,.12), transparent);
+  pointer-events: none; z-index: 1;
+}
+
+.story .frame {
+  position: relative;
+  transform: rotate(-1.5deg);
+  transition: transform .8s var(--depth-ease), box-shadow .8s var(--depth-ease);
+}
+.story .frame:hover { transform: rotate(0deg) scale(1.015); }
+
+/* ---------- Floating accent shapes (ambient) ---------- */
+.floater {
+  position: absolute;
+  pointer-events: none;
+  z-index: 0;
+  opacity: .6;
+  will-change: transform;
+}
+
+/* ---------- Reveal: adds depth entrance ---------- */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px) translateZ(-50px) rotateX(4deg);
+  transition: opacity 1s var(--depth-ease), transform 1s var(--depth-ease);
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0) translateZ(0) rotateX(0);
+}
+
+/* ---------- Map card depth ---------- */
+.map-card {
+  box-shadow: var(--shadow-md);
+  transition: transform .5s var(--depth-ease), box-shadow .5s var(--depth-ease);
+}
+.map-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+.map-label { box-shadow: 0 10px 24px -10px rgba(142,46,46,.6); }
+
+/* ---------- Strip marquee: 3D sheen ---------- */
+.strip {
+  position: relative;
+  box-shadow: inset 0 20px 40px -30px rgba(0,0,0,.8), inset 0 -20px 40px -30px rgba(0,0,0,.8);
+}
+.strip::before, .strip::after {
+  content:""; position:absolute; top:0; bottom:0; width: 15%;
+  z-index: 2; pointer-events: none;
+}
+.strip::before { left: 0; background: linear-gradient(90deg, var(--ink), transparent); }
+.strip::after { right: 0; background: linear-gradient(-90deg, var(--ink), transparent); }
+
+/* ---------- Timeline numbers 3D ---------- */
+.timeline .year {
+  text-shadow: 0 2px 20px rgba(142,46,46,.15);
+}
+
+/* ---------- Contact ctas depth ---------- */
+.contact .ctas a {
+  backdrop-filter: blur(10px);
+  background: rgba(255,255,255,.04);
+  transition: all .3s var(--depth-ease);
+}
+.contact .ctas a:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 28px -10px rgba(142,46,46,.5);
+}
+
+/* ---------- Form fields depth ---------- */
+input, textarea, select {
+  background: rgba(255,255,255,.9);
+  box-shadow: 0 1px 3px rgba(20,18,16,.06), inset 0 1px 0 rgba(255,255,255,.4);
+  transition: all .35s var(--depth-ease);
+}
+input:focus, textarea:focus, select:focus {
+  box-shadow: 0 10px 24px -10px rgba(142,46,46,.3), inset 0 1px 0 rgba(255,255,255,.4);
+  transform: translateY(-1px);
+}
+
+/* ---------- Tab buttons 3D ---------- */
+.tabs button {
+  transition: color .3s var(--depth-ease), transform .3s var(--depth-ease);
+}
+.tabs button[aria-selected="true"] { transform: translateY(-2px); }
+
+/* ---------- FAQ accordion depth ---------- */
+.faq-item {
+  transition: background .3s var(--depth-ease);
+}
+.faq-item[open] {
+  background: linear-gradient(90deg, rgba(142,46,46,.04), transparent);
+}
+
+/* ---------- Mobile sticky lift ---------- */
+.mobile-sticky {
+  box-shadow: 0 -10px 30px -10px rgba(0,0,0,.5);
+}
+
+/* ---------- Accessibility respects reduced motion ---------- */
+@media (prefers-reduced-motion: reduce) {
+  .hero .plate-3d { animation: none; }
+  .reveal { transform: none; }
+  .reveal.visible { transform: none; }
+  .scene-item, .tilt, .press-card, .policy-card, .shop-card { transition: none !important; transform: none !important; }
+}

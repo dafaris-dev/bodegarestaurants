@@ -1,6 +1,68 @@
-// Bodega SF — interactions
+// Bodega SF — interactions + 3D depth
 (function () {
   'use strict';
+
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // ---------- 3D mouse-parallax on hero ----------
+  const hero = document.querySelector('.hero');
+  if (hero && !reducedMotion) {
+    const bg = hero.querySelector('.bg');
+    const plate = hero.querySelector('.plate-3d');
+    const orbs = hero.querySelectorAll('.orb');
+    const content = hero.querySelector('.content');
+    let rafId = null, tx = 0, ty = 0, cx = 0, cy = 0;
+
+    const update = () => {
+      cx += (tx - cx) * 0.08;
+      cy += (ty - cy) * 0.08;
+      if (bg)      bg.style.transform      = `translate3d(${cx * -8}px, ${cy * -8}px, 0) scale(1.04)`;
+      if (plate)   plate.style.transform   = `translate3d(${cx * 24}px, ${cy * 24}px, 0) rotateX(${10 + cy * -4}deg) rotateY(${cx * 6}deg) rotateZ(-5deg)`;
+      if (content) content.style.transform = `translate3d(${cx * -6}px, ${cy * -6}px, 0)`;
+      orbs.forEach((o, i) => {
+        const d = (i + 1) * 14;
+        o.style.transform = `translate3d(${cx * d}px, ${cy * d}px, 0)`;
+      });
+      if (Math.abs(tx - cx) > 0.001 || Math.abs(ty - cy) > 0.001) {
+        rafId = requestAnimationFrame(update);
+      } else { rafId = null; }
+    };
+
+    hero.addEventListener('mousemove', (e) => {
+      const r = hero.getBoundingClientRect();
+      tx = ((e.clientX - r.left) / r.width - 0.5) * 2;   // -1..1
+      ty = ((e.clientY - r.top) / r.height - 0.5) * 2;
+      if (!rafId) rafId = requestAnimationFrame(update);
+    });
+    hero.addEventListener('mouseleave', () => {
+      tx = 0; ty = 0;
+      if (!rafId) rafId = requestAnimationFrame(update);
+    });
+  }
+
+  // ---------- 3D tilt on cards ----------
+  const tiltSelector = '.press-card, .policy-card, .shop-card, .gallery .tile, .map-card';
+  if (!reducedMotion) {
+    document.querySelectorAll(tiltSelector).forEach((el) => {
+      el.style.transformStyle = 'preserve-3d';
+      let raf = null, tx = 0, ty = 0;
+      const apply = () => {
+        el.style.transform = `perspective(1000px) rotateX(${ty}deg) rotateY(${tx}deg) translateZ(0)`;
+        raf = null;
+      };
+      el.addEventListener('mousemove', (e) => {
+        const r = el.getBoundingClientRect();
+        tx = ((e.clientX - r.left) / r.width - 0.5) * 10;   // -5..5 deg
+        ty = -((e.clientY - r.top) / r.height - 0.5) * 10;
+        if (!raf) raf = requestAnimationFrame(apply);
+      });
+      el.addEventListener('mouseleave', () => {
+        tx = 0; ty = 0;
+        el.style.transform = '';
+      });
+    });
+  }
+
 
   // Sticky nav state
   const nav = document.querySelector('.nav');

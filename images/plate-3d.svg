@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800">
+  <defs>
+    <radialGradient id="plateRim" cx="50%" cy="50%" r="50%">
+      <stop offset="80%" stop-color="#f6f1e7"/>
+      <stop offset="92%" stop-color="#d7c9b0"/>
+      <stop offset="100%" stop-color="#9a8a6c"/>
+    </radialGradient>
+    <radialGradient id="plateIn" cx="40%" cy="35%" r="60%">
+      <stop offset="0%" stop-color="#fffaf0"/>
+      <stop offset="60%" stop-color="#ebe2d1"/>
+      <stop offset="100%" stop-color="#9a8a6c"/>
+    </radialGradient>
+    <radialGradient id="broth" cx="45%" cy="40%" r="55%">
+      <stop offset="0%" stop-color="#c67a3a"/>
+      <stop offset="55%" stop-color="#8e4a24"/>
+      <stop offset="100%" stop-color="#4a2714"/>
+    </radialGradient>
+    <radialGradient id="hl" cx="30%" cy="25%" r="25%">
+      <stop offset="0%" stop-color="#fff" stop-opacity=".6"/>
+      <stop offset="100%" stop-color="#fff" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="soft" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="2"/>
+    </filter>
+  </defs>
+
+  <!-- shadow under plate -->
+  <ellipse cx="400" cy="700" rx="340" ry="36" fill="#000" opacity=".45" filter="url(#soft)"/>
+
+  <!-- outer rim (plate side) -->
+  <ellipse cx="400" cy="440" rx="360" ry="90" fill="#9a8a6c"/>
+  <!-- plate top -->
+  <ellipse cx="400" cy="420" rx="360" ry="85" fill="url(#plateRim)"/>
+  <!-- inner well -->
+  <ellipse cx="400" cy="420" rx="290" ry="68" fill="url(#plateIn)"/>
+  <!-- broth -->
+  <ellipse cx="400" cy="418" rx="250" ry="55" fill="url(#broth)"/>
+  <ellipse cx="400" cy="418" rx="250" ry="55" fill="url(#hl)"/>
+
+  <!-- noodles (loops) -->
+  <g stroke="#f3d58a" stroke-width="3" fill="none" opacity=".9">
+    <path d="M250 420 Q 320 380 400 410 T 550 420"/>
+    <path d="M270 435 Q 350 400 420 425 T 530 440"/>
+    <path d="M240 400 Q 310 420 390 400 T 540 410"/>
+    <path d="M300 445 Q 400 420 480 445 T 540 430"/>
+  </g>
+
+  <!-- meat / toppings -->
+  <ellipse cx="340" cy="400" rx="40" ry="14" fill="#5a2410" opacity=".9"/>
+  <ellipse cx="340" cy="397" rx="38" ry="12" fill="#7a3418"/>
+  <ellipse cx="340" cy="396" rx="20" ry="6" fill="#a65a2a" opacity=".8"/>
+
+  <ellipse cx="460" cy="415" rx="38" ry="13" fill="#5a2410" opacity=".9"/>
+  <ellipse cx="460" cy="413" rx="36" ry="11" fill="#7a3418"/>
+
+  <!-- herbs -->
+  <g fill="#2d5a3a" opacity=".85">
+    <circle cx="320" cy="390" r="4"/>
+    <circle cx="330" cy="385" r="3"/>
+    <circle cx="420" cy="395" r="4"/>
+    <circle cx="430" cy="400" r="3"/>
+    <circle cx="490" cy="415" r="4"/>
+    <circle cx="380" cy="425" r="3.5"/>
+  </g>
+
+  <!-- chili -->
+  <ellipse cx="400" cy="408" rx="8" ry="3" fill="#8e2e2e"/>
+  <ellipse cx="430" cy="420" rx="6" ry="2.5" fill="#8e2e2e"/>
+  <ellipse cx="365" cy="418" rx="5" ry="2" fill="#a63535"/>
+
+  <!-- rim highlight -->
+  <ellipse cx="300" cy="360" rx="150" ry="12" fill="#fff" opacity=".35"/>
+
+  <!-- steam -->
+  <g stroke="#f6f1e7" stroke-width="4" fill="none" opacity=".35" stroke-linecap="round">
+    <path d="M330 350 Q 320 310 340 270 T 330 190">
+      <animate attributeName="opacity" values=".35;.1;.35" dur="4s" repeatCount="indefinite"/>
+    </path>
+    <path d="M400 340 Q 390 290 410 240 T 400 160">
+      <animate attributeName="opacity" values=".3;.05;.3" dur="5s" repeatCount="indefinite"/>
+    </path>
+    <path d="M470 345 Q 460 300 480 250 T 470 180">
+      <animate attributeName="opacity" values=".35;.1;.35" dur="4.5s" repeatCount="indefinite"/>
+    </path>
+  </g>
+</svg>
