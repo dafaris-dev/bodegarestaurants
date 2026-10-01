@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <title>Menu | Bodega SF</title>
+  <meta name="description" content="The official Bodega SF menus — Lunch, Lunch Take Out, Dinner, and Dinner Take Out. Northern Vietnamese cuisine in San Francisco." />
+  <meta name="theme-color" content="#141210" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Inter:wght@300;400;500;600&display=swap" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <header class="nav scrolled" role="banner">
+    <a href="index.html" class="brand">BODEGA SF</a>
+    <nav aria-label="Primary">
+      <ul class="primary">
+        <li><a href="menu.html" aria-current="page">Menu</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="reservations.html">Reservations</a></li>
+        <li><a href="private-events.html">Private Events</a></li>
+        <li><a href="catering.html">Catering</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="shop.html">Shop</a></li>
+      </ul>
+    </nav>
+    <div class="cta-wrap">
+      <a class="btn accent inline-reserve" href="https://www.opentable.com/r/bodega-sf-san-francisco" target="_blank" rel="noopener">Reserve</a>
+      <button class="burger" aria-label="Open menu" aria-expanded="false"><span></span></button>
+    </div>
+  </header>
+
+  <aside class="drawer" aria-hidden="true">
+    <ul>
+      <li><a href="menu.html">Menu</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="reservations.html">Reservations</a></li>
+      <li><a href="private-events.html">Private Events</a></li>
+      <li><a href="catering.html">Catering</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="shop.html">Shop</a></li>
+      <li><a href="press.html">Press</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="meta">
+      <a href="tel:+14156559341">Call · +1 415-655-9341</a>
+      <a href="sms:+14159186831">Text · +1 415-918-6831</a>
+      <a href="mailto:info@bodegarestaurants.com">info@bodegarestaurants.com</a>
+    </div>
+  </aside>
+
+  <!-- Page intro -->
+  <section class="section" style="padding-top: calc(var(--sect) + 2rem); background: var(--paper);">
+    <div class="container">
+      <div class="reveal" style="max-width: 820px;">
+        <div class="accent-rule"></div>
+        <span class="eyebrow">The Menus</span>
+        <h1 style="font-size: clamp(2.75rem, 6vw, 5rem);">A Northern Vietnamese table, served family-style.</h1>
+        <p class="lede">Explore the four official Bodega SF menus. Lunch and Lunch Take Out are served 11 AM – 3 PM daily. Dinner and Dinner Take Out are served 5 – 10 PM Sunday through Thursday, and 5 – 10:30 PM Friday and Saturday.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Menu tabs -->
+  <section class="menu-section section" style="padding-top: 0;">
+    <div class="container">
+      <div data-tabs>
+        <div class="tabs" role="tablist" aria-label="Menu categories">
+          <button role="tab" id="t-lunch" aria-controls="p-lunch" aria-selected="true">Lunch</button>
+          <button role="tab" id="t-lunch-to" aria-controls="p-lunch-to" aria-selected="false">Lunch Take Out</button>
+          <button role="tab" id="t-dinner" aria-controls="p-dinner" aria-selected="false">Dinner</button>
+          <button role="tab" id="t-dinner-to" aria-controls="p-dinner-to" aria-selected="false">Dinner Take Out</button>
+        </div>
+
+        <!-- LUNCH -->
+        <div id="p-lunch" role="tabpanel" aria-labelledby="t-lunch" aria-hidden="false" class="tab-panel">
+          <article id="lunch">
+            <header style="margin-bottom: 2.5rem;">
+              <span class="eyebrow accent">Lunch</span>
+              <h2>Served 11 AM – 3 PM, Daily</h2>
+              <p class="muted">The official Bodega SF Lunch Menu as currently published on bodegarestaurants.com.</p>
+            </header>
+            <div class="menu-source">
+              <p>The current Lunch Menu is maintained on the official Bodega SF website and may be updated seasonally. Please reference the latest menu provided by the restaurant.</p>
+              <a class="btn" href="https://www.bodegarestaurants.com/menus" target="_blank" rel="noopener">Open Official Lunch Menu <span class="arrow">→</span></a>
+            </div>
+          </article>
+        </div>
+
+        <!-- LUNCH TAKEOUT -->
+        <div id="p-lunch-to" role="tabpanel" aria-labelledby="t-lunch-to" aria-hidden="true" class="tab-panel">
+          <article id="lunch-takeout">
+            <header style="margin-bottom: 2.5rem;">
+              <span class="eyebrow accent">Lunch Take Out</span>
+              <h2>Available During Lunch Service</h2>
+              <p class="muted">The lunch takeout menu is different from the dine-in menu. Lunch takeout is available during lunch service only.</p>
+            </header>
+            <div class="menu-source">
+              <p>The current Lunch Take Out Menu is maintained on the official Bodega SF website. Please reference the latest menu provided by the restaurant.</p>
+              <a class="btn" href="https://www.bodegarestaurants.com/menus" target="_blank" rel="noopener">Open Official Lunch Take Out <span class="arrow">→</span></a>
+            </div>
+          </article>
+        </div>
+
+        <!-- DINNER -->
+        <div id="p-dinner" role="tabpanel" aria-labelledby="t-dinner" aria-hidden="true" class="tab-panel">
+          <article id="dinner">
+            <header style="margin-bottom: 2.5rem;">
+              <span class="eyebrow accent">Dinner</span>
+              <h2>Sunday – Thursday 5 – 10 PM · Friday / Saturday 5 – 10:30 PM</h2>
+              <p class="muted">The official Bodega SF Dinner Menu. Reservations of 10 or more are required to participate in the Ask Billy tasting menu ($90 / person).</p>
+            </header>
+            <div class="menu-source">
+              <p>The current Dinner Menu is maintained on the official Bodega SF website. Please reference the latest menu provided by the restaurant.</p>
+              <a class="btn" href="https://www.bodegarestaurants.com/menus" target="_blank" rel="noopener">Open Official Dinner Menu <span class="arrow">→</span></a>
+            </div>
+          </article>
+        </div>
+
+        <!-- DINNER TAKEOUT -->
+        <div id="p-dinner-to" role="tabpanel" aria-labelledby="t-dinner-to" aria-hidden="true" class="tab-panel">
+          <article id="dinner-takeout">
+            <header style="margin-bottom: 2.5rem;">
+              <span class="eyebrow accent">Dinner Take Out</span>
+              <h2>Available During Dinner Service</h2>
+              <p class="muted">The dinner takeout menu is different from the dine-in menu. Dinner takeout is available during dinner service only.</p>
+            </header>
+            <div class="menu-source">
+              <p>The current Dinner Take Out Menu is maintained on the official Bodega SF website. Please reference the latest menu provided by the restaurant.</p>
+              <a class="btn" href="https://www.bodegarestaurants.com/menus" target="_blank" rel="noopener">Open Official Dinner Take Out <span class="arrow">→</span></a>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <div style="text-align: center; margin-top: 4rem;">
+        <a class="btn accent" href="https://www.opentable.com/r/bodega-sf-san-francisco" target="_blank" rel="noopener">Reserve Your Table <span class="arrow">→</span></a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="brandline">BODEGA SF</div>
+          <p>138 Mason St.<br>San Francisco, CA 94102</p>
+          <p><a href="tel:+14156559341">+1 415-655-9341</a><br>
+             <a href="sms:+14159186831">+1 415-918-6831 (text)</a><br>
+             <a href="mailto:info@bodegarestaurants.com">info@bodegarestaurants.com</a></p>
+        </div>
+        <div><h5>Visit</h5><ul>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="reservations.html">Reservations</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul></div>
+        <div><h5>Experience</h5><ul>
+          <li><a href="private-events.html">Private Events</a></li>
+          <li><a href="catering.html">Catering</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="press.html">Press</a></li>
+        </ul></div>
+        <div><h5>Guest Services</h5><ul>
+          <li><a href="faq.html">FAQs</a></li>
+          <li><a href="https://www.opentable.com/r/bodega-sf-san-francisco" target="_blank" rel="noopener">Reserve on OpenTable</a></li>
+          <li><a href="https://www.google.com/maps/dir/?api=1&destination=138+Mason+St,San+Francisco,CA+94102" target="_blank" rel="noopener">Get Directions</a></li>
+        </ul></div>
+      </div>
+      <div class="footer-base">
+        <span>© <span data-year>2026</span> Bodega SF. All rights reserved.</span>
+        <span><a href="#">Privacy Policy</a><a href="#">Accessibility</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <nav class="mobile-sticky" aria-label="Mobile actions">
+    <a href="https://www.opentable.com/r/bodega-sf-san-francisco" target="_blank" rel="noopener">Reserve</a>
+    <a href="menu.html">Menu</a>
+  </nav>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="iv" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2a1f18"/>
+      <stop offset="60%" stop-color="#4a3528"/>
+      <stop offset="100%" stop-color="#1a120e"/>
+    </linearGradient>
+    <radialGradient id="lamp" cx="50%" cy="30%" r="25%">
+      <stop offset="0%" stop-color="#f3d58a" stop-opacity=".9"/>
+      <stop offset="60%" stop-color="#b8864a" stop-opacity=".35"/>
+      <stop offset="100%" stop-color="#b8864a" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="800" height="1000" fill="url(#iv)"/>
+  <rect width="800" height="1000" fill="url(#lamp)"/>
+  <!-- tables -->
+  <rect x="80" y="620" width="640" height="20" fill="#1a120e" opacity=".7"/>
+  <rect x="120" y="640" width="560" height="140" fill="#d7c9b0" opacity=".9"/>
+  <!-- plates -->
+  <ellipse cx="260" cy="700" rx="60" ry="18" fill="#f6f1e7"/>
+  <ellipse cx="400" cy="700" rx="60" ry="18" fill="#f6f1e7"/>
+  <ellipse cx="540" cy="700" rx="60" ry="18" fill="#f6f1e7"/>
+  <!-- lamp -->
+  <path d="M360 180 L440 180 L480 260 L320 260 Z" fill="#1a120e"/>
+  <line x1="400" y1="0" x2="400" y2="180" stroke="#1a120e" stroke-width="3"/>
+  <circle cx="400" cy="260" r="12" fill="#f3d58a"/>
+</svg>

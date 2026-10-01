@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1d1512"/>
+      <stop offset="100%" stop-color="#2b1f18"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="1000" fill="url(#bg)"/>
+  <!-- grid streets -->
+  <g stroke="#4a3528" stroke-width="1" opacity=".55">
+    <line x1="0" y1="140" x2="800" y2="110"/>
+    <line x1="0" y1="260" x2="800" y2="230"/>
+    <line x1="0" y1="380" x2="800" y2="350"/>
+    <line x1="0" y1="500" x2="800" y2="470"/>
+    <line x1="0" y1="620" x2="800" y2="590"/>
+    <line x1="0" y1="740" x2="800" y2="710"/>
+    <line x1="0" y1="860" x2="800" y2="830"/>
+    <line x1="120" y1="0" x2="90" y2="1000"/>
+    <line x1="260" y1="0" x2="230" y2="1000"/>
+    <line x1="400" y1="0" x2="370" y2="1000"/>
+    <line x1="540" y1="0" x2="510" y2="1000"/>
+    <line x1="680" y1="0" x2="650" y2="1000"/>
+  </g>
+  <!-- highlighted street -->
+  <line x1="0" y1="500" x2="800" y2="470" stroke="#b8864a" stroke-width="3" opacity=".85"/>
+  <line x1="400" y1="0" x2="370" y2="1000" stroke="#b8864a" stroke-width="2" opacity=".6"/>
+  <!-- labels -->
+  <g font-family="Georgia,serif" fill="#d7c9b0" opacity=".55" font-size="13" letter-spacing="2">
+    <text x="40" y="130">GEARY</text>
+    <text x="40" y="370">O'FARRELL</text>
+    <text x="40" y="490" fill="#f6f1e7" opacity="1">ELLIS ST</text>
+    <text x="40" y="610">EDDY</text>
+    <text x="40" y="730">TURK</text>
+    <text x="110" y="990" transform="rotate(-85 110 990)">MASON ST</text>
+  </g>
+  <!-- pin -->
+  <g transform="translate(400 490)">
+    <circle r="60" fill="#8e2e2e" opacity=".18"/>
+    <circle r="32" fill="#8e2e2e" opacity=".3"/>
+    <path d="M0 -20 C -16 -20 -16 2 0 20 C 16 2 16 -20 0 -20 Z" fill="#8e2e2e"/>
+    <circle cy="-6" r="6" fill="#f6f1e7"/>
+  </g>
+  <g font-family="Inter,sans-serif" fill="#f6f1e7" text-anchor="middle">
+    <text x="400" y="560" font-size="18" letter-spacing="4">BODEGA SF</text>
+    <text x="400" y="585" font-size="12" letter-spacing="2" opacity=".7">138 MASON ST · SAN FRANCISCO</text>
+  </g>
+</svg>
