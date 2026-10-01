@@ -5,65 +5,53 @@
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
   <title>Bodega SF | Vietnamese Restaurant in San Francisco</title>
   <meta name="description" content="Bodega SF is a Northern Vietnamese restaurant in San Francisco's Tenderloin District offering modernized casual fine dining, family-style menus, and the Ask Billy tasting experience. Reservations at 138 Mason St." />
-  <meta name="theme-color" content="#141210" />
+  <meta name="theme-color" content="#0a0806" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Inter:wght@300;400;500;600&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@300;400;500;600&display=swap" />
   <link rel="stylesheet" href="css/styles.css" />
   <link rel="stylesheet" href="css/depth.css" />
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect width='48' height='48' fill='%23141210'/%3E%3Ctext x='50%25' y='56%25' font-family='Georgia' font-size='26' fill='%23F6F1E7' text-anchor='middle'%3EB%3C/text%3E%3C/svg%3E" />
+  <link rel="stylesheet" href="css/experience.css" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect width='48' height='48' fill='%230a0806'/%3E%3Ctext x='50%25' y='56%25' font-family='Georgia' font-size='26' fill='%23f6f1e7' text-anchor='middle'%3EB%3C/text%3E%3C/svg%3E" />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Restaurant",
     "name": "Bodega SF",
-    "image": "images/pho-bowl.svg",
     "servesCuisine": "Northern Vietnamese",
     "priceRange": "$$$",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "138 Mason St.",
-      "addressLocality": "San Francisco",
-      "addressRegion": "CA",
-      "postalCode": "94102",
-      "addressCountry": "US"
-    },
+    "address": {"@type":"PostalAddress","streetAddress":"138 Mason St.","addressLocality":"San Francisco","addressRegion":"CA","postalCode":"94102","addressCountry":"US"},
     "telephone": "+1-415-655-9341",
     "email": "info@bodegarestaurants.com",
     "openingHoursSpecification": [
-      {"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"11:00","closes":"15:00","name":"Brunch/Lunch"},
-      {"@type":"OpeningHoursSpecification","dayOfWeek":["Sunday","Monday","Tuesday","Wednesday","Thursday"],"opens":"17:00","closes":"22:00","name":"Dinner"},
-      {"@type":"OpeningHoursSpecification","dayOfWeek":["Friday","Saturday"],"opens":"17:00","closes":"22:30","name":"Dinner"}
+      {"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"11:00","closes":"15:00"},
+      {"@type":"OpeningHoursSpecification","dayOfWeek":["Sunday","Monday","Tuesday","Wednesday","Thursday"],"opens":"17:00","closes":"22:00"},
+      {"@type":"OpeningHoursSpecification","dayOfWeek":["Friday","Saturday"],"opens":"17:00","closes":"22:30"}
     ],
-    "acceptsReservations": "true",
-    "url": "https://www.bodegarestaurants.com/"
+    "acceptsReservations": "true"
   }
   </script>
 </head>
-<body>
+<body class="exp">
 
-  <!-- ===== Navigation ===== -->
-  <header class="nav" role="banner">
-    <a href="index.html" class="brand" aria-label="Bodega SF home">BODEGA SF</a>
-    <nav aria-label="Primary">
-      <ul class="primary">
-        <li><a href="menu.html">Menu</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="reservations.html">Reservations</a></li>
-        <li><a href="private-events.html">Private Events</a></li>
-        <li><a href="catering.html">Catering</a></li>
-        <li><a href="faq.html">FAQ</a></li>
-        <li><a href="shop.html">Shop</a></li>
-      </ul>
+  <!-- ===== Floating pill nav ===== -->
+  <header class="nav-pill" role="banner">
+    <a href="index.html" class="pill-brand">Bodega SF</a>
+    <nav class="pill-links" aria-label="Primary">
+      <a href="menu.html">Menu</a>
+      <a href="about.html">About</a>
+      <a href="reservations.html">Reservations</a>
+      <a href="private-events.html">Events</a>
+      <a href="catering.html">Catering</a>
+      <a href="faq.html">FAQ</a>
+      <a href="shop.html">Shop</a>
     </nav>
-    <div class="cta-wrap">
-      <a class="btn accent inline-reserve" href="https://www.opentable.com/r/bodega-sf-san-francisco" target="_blank" rel="noopener">Reserve</a>
-      <button class="burger" aria-label="Open menu" aria-expanded="false"><span></span></button>
-    </div>
+    <a class="pill-cta" href="https://www.opentable.com/r/bodega-sf-san-francisco" target="_blank" rel="noopener">Reserve</a>
+    <button class="pill-burger" aria-label="Open menu" aria-expanded="false"><span></span></button>
   </header>
 
-  <!-- ===== Mobile drawer ===== -->
-  <aside class="drawer" aria-hidden="true">
+  <!-- Drawer -->
+  <aside class="exp-drawer" aria-hidden="true">
     <ul>
       <li><a href="menu.html">Menu</a></li>
       <li><a href="about.html">About</a></li>
@@ -82,324 +70,428 @@
     </div>
   </aside>
 
-  <!-- ===== Hero ===== -->
-  <section class="hero scene" id="top">
-    <div class="bg" aria-hidden="true"></div>
-    <span class="orb o1" aria-hidden="true"></span>
-    <span class="orb o2" aria-hidden="true"></span>
-    <span class="orb o3" aria-hidden="true"></span>
-    <div class="plate-3d" aria-hidden="true">
+  <!-- ====================================================== -->
+  <!-- 1. HERO — 3D CINEMATIC SCENE                           -->
+  <!-- ====================================================== -->
+  <section class="hero-scene">
+    <div class="atmos" aria-hidden="true"></div>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="shaft s1" aria-hidden="true"></div>
+    <div class="shaft s2" aria-hidden="true"></div>
+    <div class="shaft s3" aria-hidden="true"></div>
+
+    <!-- outlined megaword behind -->
+    <div class="mega" aria-hidden="true">BODEGA</div>
+
+    <!-- phở bowl midground -->
+    <div class="bowl" aria-hidden="true">
       <img src="images/pho-bowl.svg" alt="" width="1000" height="1000" />
     </div>
-    <div class="fg" aria-hidden="true">
-      <span class="fg-1">Est. 2022</span>
-      <span class="fg-2">◆ Northern Vietnamese</span>
-      <span class="fg-3">138 Mason St.</span>
+
+    <!-- headline foreground -->
+    <h1 class="headline" aria-label="Bodega SF">
+      <span class="line l1">BODEGA</span>
+      <span class="line l2">SF<em>.</em></span>
+    </h1>
+
+    <!-- floating info cards -->
+    <div class="float-card fc-address">
+      <div class="lbl">Address</div>
+      <div class="val">138 Mason St.<br>San Francisco, CA 94102</div>
     </div>
-    <div class="container content">
-      <span class="eyebrow" style="color: var(--sand);">Northern Vietnamese · San Francisco · Est. 2022</span>
-      <h1>Bodega <em>SF</em></h1>
-      <div class="meta">
-        <div>
-          <div class="label">Address</div>
-          <div class="value">138 Mason St.<br>San Francisco, CA 94102</div>
-        </div>
-        <div>
-          <div class="label">Brunch / Lunch</div>
-          <div class="value">11 AM – 3 PM<br>Daily</div>
-        </div>
-        <div>
-          <div class="label">Dinner</div>
-          <div class="value">5 PM – 10 PM · Sun – Thu<br>5 PM – 10:30 PM · Fri / Sat</div>
-        </div>
-      </div>
-      <div class="ctas">
-        <a class="btn accent" href="https://www.opentable.com/r/bodega-sf-san-francisco" target="_blank" rel="noopener">Reserve <span class="arrow">→</span></a>
-        <a class="btn ghost light" href="menu.html">View Menu <span class="arrow">→</span></a>
-      </div>
+    <div class="float-card fc-hours">
+      <div class="lbl">Brunch / Lunch</div>
+      <div class="val">11 AM – 3 PM · Daily</div>
     </div>
-    <div class="scroll-hint" aria-hidden="true">Scroll</div>
+    <div class="float-card fc-dinner">
+      <div class="lbl">Dinner</div>
+      <div class="val">5 – 10 PM · Sun – Thu<br>5 – 10:30 PM · Fri / Sat</div>
+    </div>
+
+    <!-- CTA stack -->
+    <div class="cta-stack">
+      <a class="cta-reserve" href="https://www.opentable.com/r/bodega-sf-san-francisco" target="_blank" rel="noopener">◆ Reserve a Table</a>
+      <a class="cta-menu" href="menu.html">View Menu →</a>
+    </div>
+
+    <div class="scroll" aria-hidden="true">Scroll</div>
   </section>
 
-  <!-- ===== Quick Action Bar ===== -->
-  <section class="quick-bar" aria-label="Quick actions">
+  <!-- ====================================================== -->
+  <!-- 2. INTRO SPACE — floating circular food stamps         -->
+  <!-- ====================================================== -->
+  <section class="space-intro">
+    <div class="stroked" aria-hidden="true">Vietnamese</div>
+    <div class="content">
+      <div class="reveal">
+        <span class="lbl" style="font-size:.72rem; letter-spacing:.34em; text-transform:uppercase; color: var(--gold2);">◆ Northern Vietnamese</span>
+        <h2 style="margin-top: 1rem;">A family's recipe, <em>served at the table.</em></h2>
+        <p>Bodega SF brings high-quality Vietnamese cuisine back to the community through a modernized, casual fine-dining experience — built around a family-style concept of authentic and creative dishes.</p>
+        <a href="about.html" style="display: inline-flex; align-items: center; gap:.6rem; margin-top: 1.5rem; padding: 1rem 2rem; background: rgba(246,241,231,.05); color: var(--paper2); border: 1px solid rgba(246,241,231,.2); font-size: .72rem; letter-spacing: .25em; text-transform: uppercase; border-radius: 100px; backdrop-filter: blur(12px);">Our Story →</a>
+      </div>
+
+      <div class="stamps reveal" aria-hidden="true">
+        <div class="stamp a"><img src="images/pho-bowl.svg" alt=""></div>
+        <div class="stamp b"><img src="images/banh-mi.svg" alt=""></div>
+        <div class="stamp c"><img src="images/spring-rolls.svg" alt=""></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================================================== -->
+  <!-- 3. SPATIAL TIMELINE                                    -->
+  <!-- ====================================================== -->
+  <section class="timeline-3d">
+    <div class="center-line" aria-hidden="true"></div>
+    <div class="head reveal">
+      <span class="eyebrow">◆ Our Story</span>
+      <h2>Two decades, <em>one family's table.</em></h2>
+    </div>
+    <div class="events">
+      <article class="ev reveal">
+        <div class="body">
+          <h3>Bodega Bistro Opens</h3>
+          <p>Matthew Ho's family opens Bodega Bistro in San Francisco's Tenderloin District — serving traditional Northern Vietnamese cuisine.</p>
+        </div>
+        <a class="photo" href="about.html" aria-label="2003 – Bodega Bistro opens"><img src="images/story-vintage.svg" alt=""></a>
+        <div class="year">2003</div>
+      </article>
+
+      <article class="ev reveal">
+        <div class="year">2017</div>
+        <a class="photo" href="about.html" aria-label="2017 – Bodega Bistro closes"><img src="images/story-vintage.svg" alt=""></a>
+        <div class="body">
+          <h3>Bodega Bistro Closes</h3>
+          <p>After fourteen years in the Tenderloin, the original restaurant closes — but the Ho family's cooking continues.</p>
+        </div>
+      </article>
+
+      <article class="ev reveal">
+        <div class="body">
+          <h3>Pop-ups &amp; Meal Packages</h3>
+          <p>Through the pandemic, the Bodega brand continues through pop-up events and meal packages — keeping the family-style spirit alive.</p>
+        </div>
+        <a class="photo" href="about.html" aria-label="Pandemic era pop-ups"><img src="images/catering-3d.svg" alt=""></a>
+        <div class="year" style="font-size: clamp(2.5rem, 6vw, 5rem); color: var(--sand2);">◆</div>
+      </article>
+
+      <article class="ev reveal">
+        <div class="year">2022</div>
+        <a class="photo" href="about.html" aria-label="2022 – Bodega SF opens"><img src="images/story-modern.svg" alt=""></a>
+        <div class="body">
+          <h3>Bodega SF Opens</h3>
+          <p>A new brick-and-mortar in the Tenderloin — modernized casual fine dining, family-style, authentic, and creative.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ====================================================== -->
+  <!-- 4. 3D MENU PANEL STACK                                 -->
+  <!-- ====================================================== -->
+  <section class="menu-3d">
+    <div class="mega-word" aria-hidden="true">MENU · MENU</div>
+    <div class="head reveal">
+      <div>
+        <span class="eyebrow">◆ The Menus</span>
+        <h2>Four tables, <em>one kitchen.</em></h2>
+      </div>
+      <a class="view-all" href="menu.html">View Full Menu →</a>
+    </div>
+
+    <div class="menu-stack">
+      <a href="menu.html#lunch" class="panel reveal">
+        <div class="num">01 / Daily</div>
+        <div class="title">Lunch</div>
+        <div class="desc">Spring rolls, banh cuon, pho hanoi, shaking beef, lemongrass pork chop and more — served 11 AM to 3 PM, daily.</div>
+        <span class="arrow" aria-hidden="true">→</span>
+      </a>
+      <a href="menu.html#lunch-takeout" class="panel reveal">
+        <div class="num">02 / Daily</div>
+        <div class="title">Lunch Take Out</div>
+        <div class="desc">A tailored to-go menu drawn from the lunch kitchen — available during lunch service only.</div>
+        <span class="arrow" aria-hidden="true">→</span>
+      </a>
+      <a href="menu.html#dinner" class="panel reveal">
+        <div class="num">03 / Evenings</div>
+        <div class="title">Dinner</div>
+        <div class="desc">Small bites, cold dishes, Hanoi classics, hot dishes, vegetables — and the "Ask Billy" chef's tasting menu at $90 per guest.</div>
+        <span class="arrow" aria-hidden="true">→</span>
+      </a>
+      <a href="menu.html#dinner-takeout" class="panel reveal">
+        <div class="num">04 / Evenings</div>
+        <div class="title">Dinner Take Out</div>
+        <div class="desc">A curated evening to-go menu drawn from the dinner kitchen — available during dinner service only.</div>
+        <span class="arrow" aria-hidden="true">→</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- ====================================================== -->
+  <!-- 5. RESERVATION — floating 3D card                      -->
+  <!-- ====================================================== -->
+  <section class="reserve-float">
+    <div class="scene-bg" aria-hidden="true"></div>
+    <div class="mega-r" aria-hidden="true">RESERVE</div>
     <div class="inner">
-      <a href="https://www.opentable.com/r/bodega-sf-san-francisco" target="_blank" rel="noopener">
-        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
-        Reserve
-      </a>
-      <a href="menu.html">
-        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round"><path d="M6 3v18M6 3h12v18H6"/></svg>
-        View Menu
-      </a>
-      <a href="tel:+14156559341">
-        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 005 5L15 13l5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2z"/></svg>
-        Call
-      </a>
-      <a href="sms:+14159186831">
-        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round"><path d="M4 5h16v12H8l-4 4V5z"/></svg>
-        Text
-      </a>
-      <a href="https://www.google.com/maps/dir/?api=1&destination=138+Mason+St,San+Francisco,CA+94102" target="_blank" rel="noopener">
-        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round"><path d="M12 22s7-7.5 7-13a7 7 0 10-14 0c0 5.5 7 13 7 13z"/><circle cx="12" cy="9" r="2.5"/></svg>
-        Directions
-      </a>
+      <div class="left reveal">
+        <span class="eyebrow">◆ Reservations</span>
+        <h2>A seat at the <em>family table.</em></h2>
+        <p>Reservations open 30 days in advance via OpenTable for parties up to 8. For parties of 9 or more, please contact the restaurant by email. Dinner reservations of 10 or more are required to participate in the Ask Billy tasting menu.</p>
+        <div style="margin-top: 1.5rem;">
+          <a href="reservations.html" style="font-family: var(--sans); font-size: .72rem; letter-spacing: .3em; text-transform: uppercase; color: var(--gold2); border-bottom: 1px solid var(--gold2); padding-bottom: .3rem;">All Reservation Policies →</a>
+        </div>
+      </div>
+
+      <div class="res-card reveal">
+        <div class="stub">Open Table</div>
+        <div class="card">
+          <div class="r-head">
+            <div class="brand">Bodega SF</div>
+            <div class="num">RES. CARD · 2024</div>
+          </div>
+          <div class="row"><span class="k">Booking Window</span><span class="v">30 Days Ahead</span></div>
+          <div class="row"><span class="k">Party Size</span><span class="v">Up to 8 · OpenTable</span></div>
+          <div class="row"><span class="k">Ask Billy</span><span class="v">$90 / Person · 10+</span></div>
+          <div class="row"><span class="k">Table Hold</span><span class="v">15 Minutes</span></div>
+          <div class="row"><span class="k">Cancellation</span><span class="v">$25 / Guest within 2 hrs</span></div>
+          <a class="cta" href="https://www.opentable.com/r/bodega-sf-san-francisco" target="_blank" rel="noopener">Reserve on OpenTable</a>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- ===== Our Story ===== -->
-  <section class="story section" id="story">
-    <div class="container split">
+  <!-- ====================================================== -->
+  <!-- 6. SCATTER GALLERY                                     -->
+  <!-- ====================================================== -->
+  <section class="scatter">
+    <div class="inner">
       <div class="reveal">
-        <div class="accent-rule"></div>
-        <span class="eyebrow">Our Story</span>
-        <h2 class="heading">From a family bistro to a modern table.</h2>
-        <p class="lede">Bodega SF is an evolution of Matthew Ho's family's restaurant, Bodega Bistro — which operated from 2003 to 2017 in San Francisco's Tenderloin District, serving traditional Northern Vietnamese cuisine. Through pop-up events and meal packages during the pandemic, the brand continued, and in 2022 Bodega SF opened its brick-and-mortar home.</p>
-        <p>Today, Bodega SF brings high-quality Vietnamese cuisine back to the community through a modernized, casual fine-dining experience built around a family-style concept of authentic and creative dishes.</p>
-        <a class="btn ghost" href="about.html" style="margin-top: 1rem;">Read the full story <span class="arrow">→</span></a>
+        <p class="mega-tag">The <strong>table</strong>, in <strong>pieces.</strong></p>
       </div>
-      <div class="frame reveal" aria-hidden="true"></div>
-    </div>
 
-    <div class="container">
-      <div class="timeline reveal">
-        <div>
-          <div class="year">2003 – 2017</div>
-          <h4>Bodega Bistro</h4>
-          <p>Traditional Northern Vietnamese cuisine in San Francisco's Tenderloin District.</p>
-        </div>
-        <div>
-          <div class="year">Est. 2022</div>
-          <h4>Bodega SF</h4>
-          <p>A modernized, casual fine-dining evolution — family-style, authentic, and creative.</p>
-        </div>
+      <div class="scatter-grid reveal">
+        <figure class="shot s1"><img src="images/interior-3d.svg" alt="Bodega SF dining room"></figure>
+        <figure class="shot s2"><img src="images/banh-mi.svg" alt="Banh mi"></figure>
+        <figure class="shot s3"><img src="images/spring-rolls.svg" alt="Spring rolls"></figure>
+        <figure class="shot s4"><img src="images/cocktail.svg" alt="Vietnamese cocktail"></figure>
+        <figure class="shot s5"><img src="images/pho-bowl.svg" alt="Signature phở"></figure>
       </div>
     </div>
   </section>
 
-  <!-- ===== Experience strip ===== -->
-  <section class="strip" aria-hidden="true">
-    <div class="marquee">
-      <span>Northern Vietnamese</span>
-      <span>Family-style Dining</span>
-      <span>Ask Billy Tasting Menu</span>
-      <span>Tenderloin · San Francisco</span>
-      <span>Northern Vietnamese</span>
-      <span>Family-style Dining</span>
-      <span>Ask Billy Tasting Menu</span>
-      <span>Tenderloin · San Francisco</span>
-    </div>
-  </section>
-
-  <!-- ===== Menu teaser ===== -->
-  <section class="menu-section section" id="menu-teaser">
-    <div class="container">
-      <div class="menu-head reveal">
-        <div>
-          <div class="accent-rule"></div>
-          <span class="eyebrow">The Menus</span>
-          <h2>Lunch, dinner, and takeout — all with Bodega's distinct hand.</h2>
-        </div>
-        <a class="btn" href="menu.html">View Full Menu <span class="arrow">→</span></a>
-      </div>
-
-      <div data-tabs class="reveal">
-        <div class="tabs" role="tablist" aria-label="Menu categories">
-          <button role="tab" id="t-lunch" aria-controls="p-lunch" aria-selected="true">Lunch</button>
-          <button role="tab" id="t-lunch-to" aria-controls="p-lunch-to" aria-selected="false">Lunch Take Out</button>
-          <button role="tab" id="t-dinner" aria-controls="p-dinner" aria-selected="false">Dinner</button>
-          <button role="tab" id="t-dinner-to" aria-controls="p-dinner-to" aria-selected="false">Dinner Take Out</button>
-        </div>
-
-        <div id="p-lunch" role="tabpanel" aria-labelledby="t-lunch" aria-hidden="false" class="tab-panel">
-          <div class="menu-note">
-            <p class="muted">The official Bodega SF <strong>Lunch Menu</strong> is served from 11 AM to 3 PM daily.</p>
-            <a class="btn" href="menu.html#lunch">Open Lunch Menu <span class="arrow">→</span></a>
-          </div>
-        </div>
-        <div id="p-lunch-to" role="tabpanel" aria-labelledby="t-lunch-to" aria-hidden="true" class="tab-panel">
-          <div class="menu-note">
-            <p class="muted">The official Bodega SF <strong>Lunch Take Out Menu</strong> is available during lunch service and differs from dine-in.</p>
-            <a class="btn" href="menu.html#lunch-takeout">Open Lunch Take Out <span class="arrow">→</span></a>
-          </div>
-        </div>
-        <div id="p-dinner" role="tabpanel" aria-labelledby="t-dinner" aria-hidden="true" class="tab-panel">
-          <div class="menu-note">
-            <p class="muted">The official Bodega SF <strong>Dinner Menu</strong> is served Sunday – Thursday 5 – 10 PM and Friday – Saturday 5 – 10:30 PM.</p>
-            <a class="btn" href="menu.html#dinner">Open Dinner Menu <span class="arrow">→</span></a>
-          </div>
-        </div>
-        <div id="p-dinner-to" role="tabpanel" aria-labelledby="t-dinner-to" aria-hidden="true" class="tab-panel">
-          <div class="menu-note">
-            <p class="muted">The official Bodega SF <strong>Dinner Take Out Menu</strong> is available during dinner service and differs from dine-in.</p>
-            <a class="btn" href="menu.html#dinner-takeout">Open Dinner Take Out <span class="arrow">→</span></a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== Gallery ===== -->
-  <section class="section" style="padding-top: 0;">
-    <div class="container">
-      <div class="gallery reveal">
-        <figure class="tile g1"><img src="images/interior-3d.svg" alt="Bodega SF dining room with warm lighting" loading="lazy"></figure>
-        <figure class="tile g2"><img src="images/banh-mi.svg" alt="Banh mi sandwich at Bodega SF" loading="lazy"></figure>
-        <figure class="tile g3"><img src="images/spring-rolls.svg" alt="Spring rolls plated at Bodega SF" loading="lazy"></figure>
-        <figure class="tile g4"><img src="images/cocktail.svg" alt="Vietnamese-inspired cocktail at Bodega SF" loading="lazy"></figure>
-        <figure class="tile g5"><img src="images/pho-bowl.svg" alt="Signature phở bowl at Bodega SF" loading="lazy"></figure>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== Reservations teaser ===== -->
-  <section class="section" style="background: var(--cream);">
-    <div class="container split">
+  <!-- ====================================================== -->
+  <!-- 7. PRESS editorial strip                               -->
+  <!-- ====================================================== -->
+  <section class="press-strip">
+    <div class="inner">
       <div class="reveal">
-        <div class="accent-rule"></div>
-        <span class="eyebrow">Reservations</span>
-        <h2>A seat at the table.</h2>
-        <p class="lede">Reservations open 30 days in advance via OpenTable for parties up to 8. For parties of 9 or more, please contact the restaurant by email. Dinner reservations of 10 or more are required to participate in the Ask Billy tasting menu.</p>
-        <div style="display:flex; gap:1rem; flex-wrap:wrap; margin-top: 1.5rem;">
-          <a class="btn accent" href="https://www.opentable.com/r/bodega-sf-san-francisco" target="_blank" rel="noopener">Reserve on OpenTable</a>
-          <a class="btn ghost" href="reservations.html">All Reservation Info</a>
-        </div>
+        <span class="eyebrow">◆ Press</span>
+        <h2>In the pages of San Francisco's <em>most watched.</em></h2>
       </div>
-      <div class="reveal" style="aspect-ratio: 5/4; background: url('images/event-3d.svg') center/cover no-repeat;"></div>
-    </div>
-  </section>
-
-  <!-- ===== Press ===== -->
-  <section class="press-section section">
-    <div class="container">
-      <div class="reveal text-center" style="max-width: 760px; margin-inline: auto;">
-        <div class="accent-rule"></div>
-        <span class="eyebrow">Press</span>
-        <h2>Featured in the publications that know San Francisco best.</h2>
+      <div class="pubs reveal">
+        <a href="press.html">SF Eater</a>
+        <a href="press.html">Infatuation</a>
+        <a href="press.html">Forbes</a>
+        <a href="press.html">SF Weekly</a>
+        <a href="press.html">SF Standard</a>
+        <a href="press.html">Hoodline</a>
       </div>
-      <div class="press-grid reveal">
-        <article class="press-card">
-          <span class="pub">SF Eater</span>
-          <h3>Featured coverage of Bodega SF</h3>
-          <span class="read">Read →</span>
-        </article>
-        <article class="press-card">
-          <span class="pub">Infatuation SF</span>
-          <h3>Infatuation review</h3>
-          <span class="read">Read →</span>
-        </article>
-        <article class="press-card">
-          <span class="pub">Forbes</span>
-          <h3>Forbes feature</h3>
-          <span class="read">Read →</span>
-        </article>
-        <article class="press-card">
-          <span class="pub">SF Weekly</span>
-          <h3>SF Weekly feature</h3>
-          <span class="read">Read →</span>
-        </article>
-        <article class="press-card">
-          <span class="pub">The San Francisco Standard</span>
-          <h3>The San Francisco Standard</h3>
-          <span class="read">Read →</span>
-        </article>
-        <article class="press-card">
-          <span class="pub">Hoodline</span>
-          <h3>Hoodline feature</h3>
-          <span class="read">Read →</span>
-        </article>
-      </div>
-      <div class="text-center" style="margin-top: 3rem;">
-        <a class="btn ghost" href="press.html">All Press →</a>
+      <div style="text-align: center; margin-top: 3rem;">
+        <a href="press.html" style="font-family: var(--sans); font-size: .72rem; letter-spacing: .3em; text-transform: uppercase; color: var(--accent2); border-bottom: 1px solid var(--accent2); padding-bottom: .3rem;">All Press →</a>
       </div>
     </div>
   </section>
 
-  <!-- ===== Contact ===== -->
-  <section class="contact section" id="contact">
-    <div class="container">
-      <div class="reveal" style="max-width: 760px;">
-        <div class="accent-rule"></div>
-        <span class="eyebrow accent">Visit</span>
-        <h2>Find us in the Tenderloin.</h2>
-        <p class="lede">Bodega SF sits at 138 Mason St., just steps from Union Square and next to the Found Hotel.</p>
+  <!-- ====================================================== -->
+  <!-- 8. CONTACT — "entering the restaurant"                 -->
+  <!-- ====================================================== -->
+  <section class="enter">
+    <div class="bg-shot" aria-hidden="true"></div>
+    <div class="inner">
+      <div class="reveal">
+        <span class="eyebrow">◆ Visit</span>
+        <h2>Find us in the <em>Tenderloin.</em></h2>
+        <p style="color: rgba(246,241,231,.75); max-width: 48ch;">138 Mason St., just steps from Union Square, next to the Found Hotel. Walk in as availability allows, or reserve your table in advance.</p>
       </div>
 
-      <div class="contact-grid">
-        <div class="info reveal">
-          <div><div class="label">Address</div><div class="value">138 Mason St.<br>San Francisco, CA 94102</div></div>
-          <div><div class="label">Phone</div><div class="value"><a href="tel:+14156559341">+1 415-655-9341</a></div></div>
-          <div><div class="label">Text</div><div class="value"><a href="sms:+14159186831">+1 415-918-6831</a></div></div>
-          <div><div class="label">Email</div><div class="value"><a href="mailto:info@bodegarestaurants.com">info@bodegarestaurants.com</a></div></div>
-          <div class="ctas">
-            <a href="tel:+14156559341">Call</a>
-            <a href="sms:+14159186831">Text</a>
-            <a href="mailto:info@bodegarestaurants.com">Email</a>
-            <a href="https://www.google.com/maps/dir/?api=1&destination=138+Mason+St,San+Francisco,CA+94102" target="_blank" rel="noopener">Directions</a>
-          </div>
+      <div class="reveal">
+        <div class="enter-grid">
+          <div><div class="k">Address</div><div class="v">138 Mason St.<br>San Francisco, CA 94102</div></div>
+          <div><div class="k">Phone</div><div class="v"><a href="tel:+14156559341">+1 415-655-9341</a></div></div>
+          <div><div class="k">Text</div><div class="v"><a href="sms:+14159186831">+1 415-918-6831</a></div></div>
+          <div><div class="k">Email</div><div class="v"><a href="mailto:info@bodegarestaurants.com">info@bodegarestaurants.com</a></div></div>
         </div>
-        <a class="map-card reveal" href="https://www.google.com/maps/dir/?api=1&destination=138+Mason+St,San+Francisco,CA+94102" target="_blank" rel="noopener" aria-label="Open Bodega SF in Google Maps">
-          <img src="images/map.svg" alt="Map showing Bodega SF at 138 Mason St., San Francisco" />
-          <span class="map-label">Open in Google Maps <span class="arrow">→</span></span>
-        </a>
+        <div class="enter-ctas">
+          <a class="primary" href="https://www.opentable.com/r/bodega-sf-san-francisco" target="_blank" rel="noopener">Reserve</a>
+          <a href="https://www.google.com/maps/dir/?api=1&destination=138+Mason+St,San+Francisco,CA+94102" target="_blank" rel="noopener">Directions</a>
+          <a href="tel:+14156559341">Call</a>
+          <a href="sms:+14159186831">Text</a>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- ===== Footer ===== -->
-  <footer>
-    <div class="container">
-      <div class="footer-grid">
-        <div>
-          <div class="brandline">BODEGA SF</div>
-          <p>138 Mason St.<br>San Francisco, CA 94102</p>
-          <p><a href="tel:+14156559341">+1 415-655-9341</a><br>
-             <a href="sms:+14159186831">+1 415-918-6831 (text)</a><br>
-             <a href="mailto:info@bodegarestaurants.com">info@bodegarestaurants.com</a></p>
-        </div>
-        <div>
-          <h5>Visit</h5>
-          <ul>
-            <li><a href="menu.html">Menu</a></li>
-            <li><a href="reservations.html">Reservations</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
-        </div>
-        <div>
-          <h5>Experience</h5>
-          <ul>
-            <li><a href="private-events.html">Private Events</a></li>
-            <li><a href="catering.html">Catering</a></li>
-            <li><a href="shop.html">Shop</a></li>
-            <li><a href="press.html">Press</a></li>
-          </ul>
-        </div>
-        <div>
-          <h5>Guest Services</h5>
-          <ul>
-            <li><a href="faq.html">FAQs</a></li>
-            <li><a href="https://www.opentable.com/r/bodega-sf-san-francisco" target="_blank" rel="noopener">Reserve on OpenTable</a></li>
-            <li><a href="https://www.google.com/maps/dir/?api=1&destination=138+Mason+St,San+Francisco,CA+94102" target="_blank" rel="noopener">Get Directions</a></li>
-          </ul>
-        </div>
+  <footer class="exp-footer">
+    <div class="inner">
+      <div>
+        <div class="brand">BODEGA SF</div>
+        <p>138 Mason St.<br>San Francisco, CA 94102</p>
+        <p><a href="tel:+14156559341">+1 415-655-9341</a><br>
+           <a href="sms:+14159186831">+1 415-918-6831 (text)</a><br>
+           <a href="mailto:info@bodegarestaurants.com">info@bodegarestaurants.com</a></p>
       </div>
-      <div class="footer-base">
-        <span>© <span data-year>2026</span> Bodega SF. All rights reserved.</span>
-        <span>
-          <a href="#">Privacy Policy</a>
-          <a href="#">Accessibility</a>
-        </span>
-      </div>
+      <div><h5>Visit</h5><ul>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="reservations.html">Reservations</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul></div>
+      <div><h5>Experience</h5><ul>
+        <li><a href="private-events.html">Private Events</a></li>
+        <li><a href="catering.html">Catering</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="press.html">Press</a></li>
+      </ul></div>
+      <div><h5>Guest Services</h5><ul>
+        <li><a href="faq.html">FAQs</a></li>
+        <li><a href="https://www.opentable.com/r/bodega-sf-san-francisco" target="_blank" rel="noopener">OpenTable</a></li>
+        <li><a href="https://www.google.com/maps/dir/?api=1&destination=138+Mason+St,San+Francisco,CA+94102" target="_blank" rel="noopener">Directions</a></li>
+      </ul></div>
+    </div>
+    <div class="base">
+      <span>© <span data-year>2026</span> Bodega SF. All rights reserved.</span>
+      <span><a href="#">Privacy Policy</a><a href="#">Accessibility</a></span>
     </div>
   </footer>
 
-  <!-- Mobile sticky CTA -->
-  <nav class="mobile-sticky" aria-label="Mobile actions">
-    <a href="https://www.opentable.com/r/bodega-sf-san-francisco" target="_blank" rel="noopener">Reserve</a>
-    <a href="menu.html">Menu</a>
-  </nav>
+  <script>
+    // Minimal scoped JS for the experience homepage
+    (function(){
+      const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      const isTouch = ('ontouchstart' in window) || (navigator.maxTouchPoints > 0);
 
-  <script src="js/main.js" defer></script>
+      // Nav pill: shrink padding on scroll
+      const pill = document.querySelector('.nav-pill');
+      let lastY = 0;
+      window.addEventListener('scroll', () => {
+        if (!pill) return;
+        const y = window.scrollY;
+        if (y > 60) pill.style.top = '1rem';
+        else pill.style.top = '1.5rem';
+        lastY = y;
+      }, { passive: true });
+
+      // Drawer
+      const burger = document.querySelector('.pill-burger');
+      const drawer = document.querySelector('.exp-drawer');
+      const setMenu = (open) => {
+        document.body.classList.toggle('menu-open', open);
+        if (burger) burger.setAttribute('aria-expanded', String(open));
+        if (drawer) drawer.setAttribute('aria-hidden', String(!open));
+      };
+      if (burger) burger.addEventListener('click', () => setMenu(!document.body.classList.contains('menu-open')));
+      document.querySelectorAll('.exp-drawer a').forEach(a => a.addEventListener('click', () => setMenu(false)));
+      document.addEventListener('keydown', e => { if (e.key === 'Escape') setMenu(false); });
+
+      // Reveal
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } });
+      }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
+      document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+      // Hero mouse parallax
+      if (!reduced && !isTouch) {
+        const hero = document.querySelector('.hero-scene');
+        if (hero) {
+          const bowl = hero.querySelector('.bowl');
+          const mega = hero.querySelector('.mega');
+          const headline = hero.querySelector('.headline');
+          const fcs = hero.querySelectorAll('.float-card');
+          const shafts = hero.querySelectorAll('.shaft');
+          let raf = null, tx = 0, ty = 0, cx = 0, cy = 0;
+          const upd = () => {
+            cx += (tx - cx) * 0.08; cy += (ty - cy) * 0.08;
+            if (bowl)     bowl.style.transform     = `translate3d(${cx*30}px, ${cy*20}px, 0) rotateX(${14+cy*-3}deg) rotateY(${cx*5}deg) rotateZ(-8deg)`;
+            if (mega)     mega.style.transform     = `translate(-50%, -50%) translate3d(${cx*-20}px, ${cy*-15}px, 0)`;
+            if (headline) headline.style.transform = `translate3d(${cx*-10}px, ${cy*-8}px, 0)`;
+            fcs.forEach((fc, i) => {
+              const d = (i+1)*8;
+              const base = fc.dataset.base || '';
+              fc.style.transform = `translate3d(${cx*d}px, ${cy*d}px, 0) ${base}`;
+            });
+            shafts.forEach((s, i) => {
+              const d = (i+1)*12;
+              const rot = s.dataset.rot || '';
+              s.style.transform = `translate3d(${cx*d}px, 0, 0) ${rot}`;
+            });
+            if (Math.abs(tx-cx) > 0.001 || Math.abs(ty-cy) > 0.001) raf = requestAnimationFrame(upd);
+            else raf = null;
+          };
+          // store base transforms
+          hero.querySelectorAll('.float-card').forEach(fc => {
+            const cs = getComputedStyle(fc).transform;
+            if (cs && cs !== 'none') fc.dataset.base = fc.className.includes('fc-address') ? 'rotateY(6deg) rotateX(-2deg)' : fc.className.includes('fc-hours') ? 'rotateY(4deg) rotateX(-3deg)' : 'rotateY(-6deg) rotateX(-2deg)';
+          });
+          hero.querySelectorAll('.shaft').forEach((s, i) => {
+            s.dataset.rot = i === 0 ? 'rotate(12deg)' : i === 1 ? 'rotate(-8deg)' : 'rotate(10deg)';
+          });
+          hero.addEventListener('mousemove', (e) => {
+            const r = hero.getBoundingClientRect();
+            tx = ((e.clientX - r.left) / r.width - 0.5) * 2;
+            ty = ((e.clientY - r.top) / r.height - 0.5) * 2;
+            if (!raf) raf = requestAnimationFrame(upd);
+          });
+          hero.addEventListener('mouseleave', () => { tx = 0; ty = 0; if (!raf) raf = requestAnimationFrame(upd); });
+        }
+      }
+
+      // Scroll parallax for hero bowl + headline
+      if (!reduced) {
+        const hero = document.querySelector('.hero-scene');
+        const bowl = hero && hero.querySelector('.bowl');
+        const headline = hero && hero.querySelector('.headline');
+        const mega = hero && hero.querySelector('.mega');
+        let srf = null;
+        const sc = () => {
+          const y = window.scrollY;
+          const vh = window.innerHeight;
+          if (y < vh * 1.3) {
+            if (headline) {
+              headline.style.transform = `translate3d(0, ${y * 0.3}px, 0)`;
+              headline.style.opacity = String(Math.max(0, 1 - y / (vh*.9)));
+            }
+            if (mega)  mega.style.transform  = `translate(-50%, -50%) translate3d(0, ${y*0.5}px, 0) scale(${1 - Math.min(.2, y/vh*.2)})`;
+          }
+          srf = null;
+        };
+        window.addEventListener('scroll', () => { if (!srf) srf = requestAnimationFrame(sc); }, { passive: true });
+      }
+
+      // Menu panels tilt on scroll (subtle)
+      if (!reduced) {
+        const panels = document.querySelectorAll('.menu-stack .panel');
+        let praf = null;
+        const pupdate = () => {
+          const vh = window.innerHeight;
+          panels.forEach((p, i) => {
+            const r = p.getBoundingClientRect();
+            const t = Math.max(-1, Math.min(1, (r.top + r.height/2 - vh/2) / vh));
+            if (!p.matches(':hover')) {
+              const baseY = [8, 3, -3, -8][i] || 0;
+              p.style.transform = `rotateY(${baseY}deg) translateZ(${[0,10,10,0][i] || 0}px) translateY(${t * -10}px)`;
+            }
+          });
+          praf = null;
+        };
+        window.addEventListener('scroll', () => { if (!praf) praf = requestAnimationFrame(pupdate); }, { passive: true });
+      }
+
+      // Year
+      const yEl = document.querySelector('[data-year]');
+      if (yEl) yEl.textContent = new Date().getFullYear();
+    })();
+  </script>
 </body>
 </html>
