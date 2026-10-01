@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="sm-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1a1310"/>
+      <stop offset="1" stop-color="#0a0706"/>
+    </linearGradient>
+    <radialGradient id="sm-light" cx="50%" cy="25%" r="40%">
+      <stop offset="0" stop-color="#f3d58a" stop-opacity=".55"/>
+      <stop offset="1" stop-color="#b8864a" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="sm-glass" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1a0f06"/>
+      <stop offset=".5" stop-color="#3a2820"/>
+      <stop offset="1" stop-color="#1a0f06"/>
+    </linearGradient>
+    <linearGradient id="sm-sign" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#8e2e2e"/>
+      <stop offset="1" stop-color="#6e1e1e"/>
+    </linearGradient>
+    <linearGradient id="sm-concrete" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2a2219"/>
+      <stop offset="1" stop-color="#140e0a"/>
+    </linearGradient>
+    <filter id="sm-blur">
+      <feGaussianBlur stdDeviation="3"/>
+    </filter>
+  </defs>
+
+  <rect width="800" height="1000" fill="url(#sm-bg)"/>
+  <rect width="800" height="600" fill="url(#sm-light)"/>
+
+  <!-- Modern facade -->
+  <rect y="150" width="800" height="850" fill="url(#sm-concrete)"/>
+
+  <!-- Horizontal panel seams -->
+  <g stroke="#0a0706" stroke-width="1" opacity=".7">
+    <line x1="0" y1="200" x2="800" y2="200"/>
+    <line x1="0" y1="450" x2="800" y2="450"/>
+    <line x1="0" y1="700" x2="800" y2="700"/>
+  </g>
+
+  <!-- Large storefront window (floor-to-ceiling) -->
+  <rect x="80" y="300" width="640" height="600" fill="url(#sm-glass)"/>
+
+  <!-- Interior through window -->
+  <g>
+    <!-- warm backlight -->
+    <rect x="90" y="310" width="620" height="580" fill="#4a2e24" opacity=".4"/>
+    <!-- pendant lamp glows -->
+    <circle cx="220" cy="420" r="35" fill="#f3d58a" opacity=".9"/>
+    <circle cx="220" cy="420" r="80" fill="#f3d58a" opacity=".3" filter="url(#sm-blur)"/>
+    <circle cx="400" cy="420" r="35" fill="#f3d58a" opacity=".9"/>
+    <circle cx="400" cy="420" r="80" fill="#f3d58a" opacity=".3" filter="url(#sm-blur)"/>
+    <circle cx="580" cy="420" r="35" fill="#f3d58a" opacity=".9"/>
+    <circle cx="580" cy="420" r="80" fill="#f3d58a" opacity=".3" filter="url(#sm-blur)"/>
+
+    <!-- interior table silhouettes -->
+    <rect x="140" y="680" width="160" height="100" fill="#4a3220" opacity=".6"/>
+    <rect x="320" y="680" width="160" height="100" fill="#4a3220" opacity=".6"/>
+    <rect x="500" y="680" width="160" height="100" fill="#4a3220" opacity=".6"/>
+    <!-- bottles/figures -->
+    <rect x="160" y="630" width="8" height="50" fill="#3a1a1a"/>
+    <rect x="180" y="635" width="8" height="45" fill="#2a3a1a"/>
+    <rect x="340" y="630" width="8" height="50" fill="#3a1a1a"/>
+    <rect x="520" y="630" width="8" height="50" fill="#4a2a0a"/>
+    <!-- people silhouettes -->
+    <circle cx="400" cy="650" r="18" fill="#1a0f06" opacity=".7"/>
+    <path d="M382 668 L418 668 L420 720 L380 720 Z" fill="#1a0f06" opacity=".7"/>
+    <circle cx="580" cy="650" r="16" fill="#1a0f06" opacity=".7"/>
+    <path d="M564 666 L596 666 L598 720 L562 720 Z" fill="#1a0f06" opacity=".7"/>
+  </g>
+
+  <!-- window mullions -->
+  <g stroke="#0a0706" stroke-width="4">
+    <line x1="80" y1="300" x2="80" y2="900"/>
+    <line x1="720" y1="300" x2="720" y2="900"/>
+    <line x1="80" y1="300" x2="720" y2="300"/>
+    <line x1="80" y1="900" x2="720" y2="900"/>
+    <line x1="293" y1="300" x2="293" y2="900"/>
+    <line x1="507" y1="300" x2="507" y2="900"/>
+  </g>
+  <!-- window highlight gloss -->
+  <path d="M85 310 Q 100 500 85 890" stroke="#f6f1e7" stroke-width="1.5" fill="none" opacity=".2"/>
+  <path d="M298 310 Q 310 500 298 890" stroke="#f6f1e7" stroke-width="1.5" fill="none" opacity=".2"/>
+  <path d="M512 310 Q 525 500 512 890" stroke="#f6f1e7" stroke-width="1.5" fill="none" opacity=".2"/>
+
+  <!-- Minimal signage -->
+  <g transform="translate(400 230)">
+    <text text-anchor="middle" font-family="Georgia, serif" font-size="42" fill="#f6f1e7" letter-spacing="12">BODEGA</text>
+    <text y="30" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" letter-spacing="8" fill="#f6c874">SAN FRANCISCO · EST. 2022</text>
+    <!-- accent rule -->
+    <line x1="-60" y1="48" x2="60" y2="48" stroke="#8e2e2e" stroke-width="2"/>
+  </g>
+
+  <!-- sidewalk reflection -->
+  <rect y="920" width="800" height="80" fill="#0a0706"/>
+  <g opacity=".25">
+    <rect x="80" y="920" width="640" height="40" fill="#4a2e24"/>
+    <circle cx="220" cy="930" r="20" fill="#f3d58a" filter="url(#sm-blur)"/>
+    <circle cx="400" cy="930" r="20" fill="#f3d58a" filter="url(#sm-blur)"/>
+    <circle cx="580" cy="930" r="20" fill="#f3d58a" filter="url(#sm-blur)"/>
+  </g>
+
+  <!-- street lamps -->
+  <circle cx="100" cy="100" r="25" fill="#f6b35a" opacity=".8"/>
+  <circle cx="100" cy="100" r="90" fill="#f6b35a" opacity=".3" filter="url(#sm-blur)"/>
+  <circle cx="700" cy="80" r="25" fill="#f6b35a" opacity=".8"/>
+  <circle cx="700" cy="80" r="90" fill="#f6b35a" opacity=".3" filter="url(#sm-blur)"/>
+</svg>

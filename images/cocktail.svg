@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000">
+  <defs>
+    <linearGradient id="bg-ck" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#3a1a1a"/>
+      <stop offset="1" stop-color="#140808"/>
+    </linearGradient>
+    <linearGradient id="glass" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f6f1e7" stop-opacity=".4"/>
+      <stop offset=".5" stop-color="#f6f1e7" stop-opacity=".1"/>
+      <stop offset="1" stop-color="#f6f1e7" stop-opacity=".25"/>
+    </linearGradient>
+    <linearGradient id="liquid" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f6a85a"/>
+      <stop offset=".4" stop-color="#d4593a"/>
+      <stop offset="1" stop-color="#6e1e1e"/>
+    </linearGradient>
+    <radialGradient id="liquidHL" cx="30%" cy="20%" r="30%">
+      <stop offset="0" stop-color="#ffd58c" stop-opacity=".7"/>
+      <stop offset="1" stop-color="#ffd58c" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="ck-blur" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4"/>
+    </filter>
+  </defs>
+
+  <rect width="1000" height="1000" fill="url(#bg-ck)"/>
+
+  <!-- bar surface -->
+  <ellipse cx="500" cy="850" rx="700" ry="80" fill="#1a0808" opacity=".9"/>
+  <ellipse cx="500" cy="850" rx="700" ry="80" fill="url(#liquidHL)" opacity=".2"/>
+
+  <!-- glass shadow -->
+  <ellipse cx="500" cy="880" rx="200" ry="20" fill="#000" opacity=".7" filter="url(#ck-blur)"/>
+
+  <!-- cocktail glass (coupe) -->
+  <g transform="translate(500 500)">
+    <!-- stem -->
+    <rect x="-5" y="150" width="10" height="200" fill="url(#glass)" stroke="#f6f1e7" stroke-opacity=".3"/>
+    <!-- base -->
+    <ellipse cx="0" cy="360" rx="90" ry="12" fill="#f6f1e7" opacity=".2"/>
+    <ellipse cx="0" cy="358" rx="90" ry="10" fill="#f6f1e7" opacity=".4"/>
+    <ellipse cx="0" cy="355" rx="80" ry="7" fill="url(#liquidHL)" opacity=".3"/>
+
+    <!-- coupe bowl: outer -->
+    <path d="M-200 0 Q -200 150 0 170 Q 200 150 200 0 Z" fill="url(#glass)" stroke="#f6f1e7" stroke-opacity=".4" stroke-width="2"/>
+    <!-- liquid inside -->
+    <path d="M-190 10 Q -190 140 0 160 Q 190 140 190 10 Z" fill="url(#liquid)"/>
+    <!-- surface ellipse -->
+    <ellipse cx="0" cy="10" rx="190" ry="22" fill="#f6b35a"/>
+    <ellipse cx="0" cy="10" rx="190" ry="22" fill="url(#liquidHL)"/>
+    <!-- lime slice floating -->
+    <g transform="translate(-80 -5) rotate(-15)">
+      <ellipse cx="0" cy="0" rx="35" ry="10" fill="#8acca8"/>
+      <ellipse cx="0" cy="-1" rx="30" ry="8" fill="#c2e5a8"/>
+      <g stroke="#2d5a3a" stroke-width=".8" opacity=".5">
+        <line x1="-25" y1="0" x2="25" y2="0"/>
+        <line x1="-15" y1="-5" x2="15" y2="5"/>
+        <line x1="-15" y1="5" x2="15" y2="-5"/>
+      </g>
+    </g>
+    <!-- mint leaves -->
+    <g fill="#4a8a3a">
+      <ellipse cx="50" cy="-10" rx="18" ry="10" transform="rotate(20 50 -10)"/>
+      <ellipse cx="70" cy="-20" rx="15" ry="8" transform="rotate(-10 70 -20)"/>
+      <ellipse cx="40" cy="-25" rx="14" ry="7" transform="rotate(30 40 -25)"/>
+    </g>
+    <!-- glass highlight -->
+    <path d="M-180 10 Q -170 100 -140 150" stroke="#f6f1e7" stroke-width="4" fill="none" opacity=".6"/>
+    <path d="M160 20 Q 150 90 120 140" stroke="#f6f1e7" stroke-width="2" fill="none" opacity=".3"/>
+
+    <!-- rim highlight -->
+    <path d="M-200 0 Q -100 -8 0 -5 Q 100 -8 200 0" stroke="#f6f1e7" stroke-width="2" fill="none" opacity=".7"/>
+  </g>
+
+  <!-- bokeh lights -->
+  <g opacity=".5">
+    <circle cx="150" cy="200" r="40" fill="#f6b35a" filter="url(#ck-blur)"/>
+    <circle cx="850" cy="150" r="30" fill="#f6b35a" filter="url(#ck-blur)"/>
+    <circle cx="200" cy="400" r="20" fill="#d4593a" filter="url(#ck-blur)"/>
+    <circle cx="820" cy="350" r="25" fill="#d4593a" filter="url(#ck-blur)"/>
+  </g>
+</svg>

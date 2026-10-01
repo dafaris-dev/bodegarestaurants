@@ -1,0 +1,125 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000">
+  <defs>
+    <linearGradient id="bg-bm" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f6f1e7"/>
+      <stop offset="1" stop-color="#d7c9b0"/>
+    </linearGradient>
+    <linearGradient id="bread" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f6c874"/>
+      <stop offset=".5" stop-color="#d49854"/>
+      <stop offset="1" stop-color="#7a4a1a"/>
+    </linearGradient>
+    <linearGradient id="breadTop" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fde8a6"/>
+      <stop offset="1" stop-color="#d49854"/>
+    </linearGradient>
+    <linearGradient id="pork" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#c67a3a"/>
+      <stop offset=".5" stop-color="#8a3a1a"/>
+      <stop offset="1" stop-color="#4a1a08"/>
+    </linearGradient>
+    <linearGradient id="pate" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#8a4a3a"/>
+      <stop offset="1" stop-color="#3a1a10"/>
+    </linearGradient>
+    <radialGradient id="plate2" cx="50%" cy="50%" r="50%">
+      <stop offset="80%" stop-color="#f6f1e7"/>
+      <stop offset="100%" stop-color="#9a8a6c"/>
+    </radialGradient>
+    <filter id="shad2" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4"/>
+    </filter>
+  </defs>
+
+  <rect width="1000" height="1000" fill="url(#bg-bm)"/>
+
+  <!-- wooden table surface vignette -->
+  <ellipse cx="500" cy="700" rx="800" ry="200" fill="#8a6a3a" opacity=".12"/>
+
+  <!-- plate shadow -->
+  <ellipse cx="500" cy="760" rx="400" ry="30" fill="#000" opacity=".3" filter="url(#shad2)"/>
+
+  <!-- plate -->
+  <ellipse cx="500" cy="700" rx="400" ry="90" fill="#2a1d12"/>
+  <ellipse cx="500" cy="680" rx="400" ry="80" fill="url(#plate2)"/>
+  <ellipse cx="500" cy="680" rx="340" ry="60" fill="#ebe2d1"/>
+
+  <!-- banh mi body (bread roll perspective) -->
+  <g transform="translate(500 580)">
+    <!-- shadow under sandwich -->
+    <ellipse cx="0" cy="110" rx="320" ry="22" fill="#000" opacity=".3" filter="url(#shad2)"/>
+
+    <!-- bottom bread -->
+    <path d="M-310 60 Q -320 30 -290 10 L 290 10 Q 320 30 310 60 Q 300 100 240 110 Q 100 115 -100 112 Q -230 108 -300 95 Z" fill="url(#bread)"/>
+    <!-- bread cross-hatch texture -->
+    <g stroke="#6a3a1a" stroke-width=".8" opacity=".4">
+      <line x1="-280" y1="40" x2="-220" y2="90"/>
+      <line x1="-220" y1="40" x2="-160" y2="90"/>
+      <line x1="-160" y1="40" x2="-100" y2="90"/>
+      <line x1="-100" y1="40" x2="-40" y2="90"/>
+      <line x1="-40" y1="40" x2="20" y2="90"/>
+      <line x1="20" y1="40" x2="80" y2="90"/>
+      <line x1="80" y1="40" x2="140" y2="90"/>
+      <line x1="140" y1="40" x2="200" y2="90"/>
+      <line x1="200" y1="40" x2="260" y2="90"/>
+    </g>
+
+    <!-- pate layer -->
+    <path d="M-290 15 Q -200 -5 0 0 Q 200 5 290 15 L 290 25 Q 100 10 -290 25 Z" fill="url(#pate)"/>
+
+    <!-- grilled pork slices -->
+    <g>
+      <ellipse cx="-150" cy="-5" rx="80" ry="20" fill="url(#pork)"/>
+      <ellipse cx="-150" cy="-10" rx="75" ry="15" fill="#a65a2a" opacity=".6"/>
+      <ellipse cx="40" cy="-10" rx="90" ry="22" fill="url(#pork)"/>
+      <ellipse cx="40" cy="-15" rx="85" ry="17" fill="#a65a2a" opacity=".6"/>
+      <ellipse cx="200" cy="-8" rx="70" ry="19" fill="url(#pork)"/>
+      <ellipse cx="200" cy="-13" rx="65" ry="14" fill="#a65a2a" opacity=".6"/>
+    </g>
+
+    <!-- pickled carrots & daikon (orange + white sticks) -->
+    <g>
+      <rect x="-220" y="-30" width="6" height="40" rx="2" fill="#f6a85a" transform="rotate(-20 -220 -30)"/>
+      <rect x="-200" y="-35" width="6" height="42" rx="2" fill="#f6f1e7" transform="rotate(10 -200 -35)"/>
+      <rect x="-100" y="-38" width="6" height="45" rx="2" fill="#f6a85a" transform="rotate(-5 -100 -38)"/>
+      <rect x="-70" y="-32" width="6" height="40" rx="2" fill="#f6f1e7" transform="rotate(15 -70 -32)"/>
+      <rect x="100" y="-36" width="6" height="44" rx="2" fill="#f6a85a" transform="rotate(-10 100 -36)"/>
+      <rect x="140" y="-30" width="6" height="38" rx="2" fill="#f6f1e7" transform="rotate(20 140 -30)"/>
+      <rect x="230" y="-28" width="6" height="36" rx="2" fill="#f6a85a" transform="rotate(-15 230 -28)"/>
+    </g>
+
+    <!-- cilantro / coriander leaves -->
+    <g fill="#4a8a3a">
+      <ellipse cx="-170" cy="-40" rx="10" ry="5" transform="rotate(-30 -170 -40)"/>
+      <ellipse cx="-50" cy="-45" rx="12" ry="6" transform="rotate(20 -50 -45)"/>
+      <ellipse cx="80" cy="-42" rx="10" ry="5" transform="rotate(-15 80 -42)"/>
+      <ellipse cx="210" cy="-42" rx="12" ry="6" transform="rotate(25 210 -42)"/>
+      <ellipse cx="0" cy="-50" rx="8" ry="4" transform="rotate(0 0 -50)"/>
+    </g>
+
+    <!-- jalapeño slices -->
+    <g>
+      <ellipse cx="-120" cy="-48" rx="10" ry="4" fill="#2d5a3a"/>
+      <ellipse cx="-120" cy="-48" rx="7" ry="2" fill="#8acca8"/>
+      <ellipse cx="150" cy="-50" rx="10" ry="4" fill="#2d5a3a"/>
+      <ellipse cx="150" cy="-50" rx="7" ry="2" fill="#8acca8"/>
+    </g>
+
+    <!-- top bread half -->
+    <path d="M-310 -45 Q -320 -75 -290 -95 L 290 -95 Q 320 -75 310 -45 Q 300 -10 240 -5 Q 100 0 -100 -2 Q -230 -5 -300 -20 Z" fill="url(#breadTop)"/>
+    <!-- top bread highlight slash -->
+    <path d="M-250 -85 Q -200 -92 -140 -85" stroke="#fde8a6" stroke-width="4" fill="none" opacity=".9"/>
+    <path d="M-80 -88 Q 10 -94 100 -88" stroke="#fde8a6" stroke-width="4" fill="none" opacity=".9"/>
+    <path d="M170 -85 Q 220 -92 260 -85" stroke="#fde8a6" stroke-width="4" fill="none" opacity=".9"/>
+    <!-- top crust shadow -->
+    <path d="M-310 -45 Q 0 -30 310 -45" stroke="#7a4a1a" stroke-width="2" fill="none" opacity=".5"/>
+  </g>
+
+  <!-- side herb garnish on plate -->
+  <g fill="#4a8a3a" opacity=".7">
+    <ellipse cx="220" cy="700" rx="18" ry="8" transform="rotate(-30 220 700)"/>
+    <ellipse cx="780" cy="700" rx="18" ry="8" transform="rotate(30 780 700)"/>
+    <circle cx="200" cy="710" r="4"/>
+    <circle cx="800" cy="710" r="4"/>
+  </g>
+</svg>

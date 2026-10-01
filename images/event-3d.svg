@@ -1,0 +1,137 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1200" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="ev-wall" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2b1f17"/>
+      <stop offset="1" stop-color="#140e0a"/>
+    </linearGradient>
+    <radialGradient id="ev-light" cx="50%" cy="30%" r="40%">
+      <stop offset="0" stop-color="#f3d58a" stop-opacity=".4"/>
+      <stop offset="1" stop-color="#b8864a" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="ev-cloth" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f6f1e7"/>
+      <stop offset="1" stop-color="#9a8a6c"/>
+    </linearGradient>
+    <radialGradient id="ev-plate" cx="50%" cy="50%" r="50%">
+      <stop offset="80%" stop-color="#f6f1e7"/>
+      <stop offset="100%" stop-color="#6e5a3a"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1000" height="1200" fill="url(#ev-wall)"/>
+  <rect width="1000" height="1200" fill="url(#ev-light)"/>
+
+  <!-- long dining table perspective -->
+  <!-- shadow -->
+  <polygon points="100,900 900,900 1050,1050 -50,1050" fill="#000" opacity=".4"/>
+  <!-- cloth side -->
+  <polygon points="100,760 900,760 1050,1050 -50,1050" fill="url(#ev-cloth)"/>
+  <!-- cloth top -->
+  <polygon points="100,760 900,760 950,700 50,700" fill="#f6f1e7"/>
+
+  <!-- place settings — perspective rows -->
+  <g>
+    <!-- left row -->
+    <g transform="translate(220 740)">
+      <ellipse cx="0" cy="0" rx="80" ry="18" fill="url(#ev-plate)"/>
+      <ellipse cx="0" cy="-2" rx="62" ry="14" fill="#ebe2d1"/>
+      <circle cx="0" cy="-2" r="8" fill="#8e2e2e"/>
+    </g>
+    <g transform="translate(500 740)">
+      <ellipse cx="0" cy="0" rx="80" ry="18" fill="url(#ev-plate)"/>
+      <ellipse cx="0" cy="-2" rx="62" ry="14" fill="#ebe2d1"/>
+      <circle cx="0" cy="-2" r="8" fill="#8e2e2e"/>
+    </g>
+    <g transform="translate(780 740)">
+      <ellipse cx="0" cy="0" rx="80" ry="18" fill="url(#ev-plate)"/>
+      <ellipse cx="0" cy="-2" rx="62" ry="14" fill="#ebe2d1"/>
+      <circle cx="0" cy="-2" r="8" fill="#8e2e2e"/>
+    </g>
+
+    <!-- front row (closer, bigger) -->
+    <g transform="translate(180 900)">
+      <ellipse cx="0" cy="0" rx="110" ry="25" fill="url(#ev-plate)"/>
+      <ellipse cx="0" cy="-2" rx="88" ry="20" fill="#ebe2d1"/>
+      <!-- small ceramic cup -->
+      <rect x="-25" y="-15" width="50" height="24" rx="4" fill="#1a0f06"/>
+      <ellipse cx="0" cy="-15" rx="25" ry="7" fill="#f6b35a"/>
+    </g>
+    <g transform="translate(500 920)">
+      <ellipse cx="0" cy="0" rx="120" ry="28" fill="url(#ev-plate)"/>
+      <ellipse cx="0" cy="-2" rx="98" ry="22" fill="#ebe2d1"/>
+      <!-- small dish -->
+      <ellipse cx="0" cy="-6" rx="50" ry="10" fill="#8e2e2e" opacity=".7"/>
+      <ellipse cx="0" cy="-8" rx="45" ry="8" fill="#a63535" opacity=".5"/>
+    </g>
+    <g transform="translate(820 900)">
+      <ellipse cx="0" cy="0" rx="110" ry="25" fill="url(#ev-plate)"/>
+      <ellipse cx="0" cy="-2" rx="88" ry="20" fill="#ebe2d1"/>
+      <rect x="-25" y="-15" width="50" height="24" rx="4" fill="#1a0f06"/>
+      <ellipse cx="0" cy="-15" rx="25" ry="7" fill="#f6b35a"/>
+    </g>
+  </g>
+
+  <!-- wine glasses -->
+  <g>
+    <g transform="translate(100 820)">
+      <path d="M-18 0 Q -18 30 0 35 Q 18 30 18 0 Z" fill="#8e2e2e" opacity=".6"/>
+      <path d="M-18 0 Q -18 30 0 35 Q 18 30 18 0 Z" fill="none" stroke="#f6f1e7" stroke-opacity=".3"/>
+      <line x1="0" y1="35" x2="0" y2="80" stroke="#f6f1e7" stroke-opacity=".3"/>
+      <ellipse cx="0" cy="82" rx="18" ry="3" fill="#f6f1e7" opacity=".3"/>
+    </g>
+    <g transform="translate(400 820)">
+      <path d="M-18 0 Q -18 30 0 35 Q 18 30 18 0 Z" fill="#8e2e2e" opacity=".6"/>
+      <path d="M-18 0 Q -18 30 0 35 Q 18 30 18 0 Z" fill="none" stroke="#f6f1e7" stroke-opacity=".3"/>
+      <line x1="0" y1="35" x2="0" y2="80" stroke="#f6f1e7" stroke-opacity=".3"/>
+      <ellipse cx="0" cy="82" rx="18" ry="3" fill="#f6f1e7" opacity=".3"/>
+    </g>
+    <g transform="translate(600 820)">
+      <path d="M-18 0 Q -18 30 0 35 Q 18 30 18 0 Z" fill="#8e2e2e" opacity=".6"/>
+      <path d="M-18 0 Q -18 30 0 35 Q 18 30 18 0 Z" fill="none" stroke="#f6f1e7" stroke-opacity=".3"/>
+      <line x1="0" y1="35" x2="0" y2="80" stroke="#f6f1e7" stroke-opacity=".3"/>
+      <ellipse cx="0" cy="82" rx="18" ry="3" fill="#f6f1e7" opacity=".3"/>
+    </g>
+    <g transform="translate(900 820)">
+      <path d="M-18 0 Q -18 30 0 35 Q 18 30 18 0 Z" fill="#8e2e2e" opacity=".6"/>
+      <path d="M-18 0 Q -18 30 0 35 Q 18 30 18 0 Z" fill="none" stroke="#f6f1e7" stroke-opacity=".3"/>
+      <line x1="0" y1="35" x2="0" y2="80" stroke="#f6f1e7" stroke-opacity=".3"/>
+      <ellipse cx="0" cy="82" rx="18" ry="3" fill="#f6f1e7" opacity=".3"/>
+    </g>
+  </g>
+
+  <!-- center candles -->
+  <g>
+    <g transform="translate(360 700)">
+      <rect x="-6" y="0" width="12" height="40" fill="#2a1d12"/>
+      <ellipse cx="0" cy="40" rx="12" ry="3" fill="#1a0f06"/>
+      <path d="M-2 -4 Q 0 -14 2 -4" fill="#f6b35a"/>
+      <circle cx="0" cy="-4" r="20" fill="#f6b35a" opacity=".4" filter="blur(6px)">
+        <animate attributeName="opacity" values=".4;.25;.4" dur="2s" repeatCount="indefinite"/>
+      </circle>
+    </g>
+    <g transform="translate(640 700)">
+      <rect x="-6" y="0" width="12" height="40" fill="#2a1d12"/>
+      <ellipse cx="0" cy="40" rx="12" ry="3" fill="#1a0f06"/>
+      <path d="M-2 -4 Q 0 -14 2 -4" fill="#f6b35a"/>
+      <circle cx="0" cy="-4" r="20" fill="#f6b35a" opacity=".4" filter="blur(6px)">
+        <animate attributeName="opacity" values=".4;.25;.4" dur="2.5s" repeatCount="indefinite"/>
+      </circle>
+    </g>
+  </g>
+
+  <!-- pendant lamps overhead -->
+  <g>
+    <line x1="300" y1="0" x2="300" y2="400" stroke="#1a0f06" stroke-width="1.5"/>
+    <circle cx="300" cy="420" r="25" fill="#f3d58a"/>
+    <circle cx="300" cy="420" r="60" fill="#f3d58a" opacity=".25" filter="blur(14px)"/>
+    <line x1="700" y1="0" x2="700" y2="400" stroke="#1a0f06" stroke-width="1.5"/>
+    <circle cx="700" cy="420" r="25" fill="#f3d58a"/>
+    <circle cx="700" cy="420" r="60" fill="#f3d58a" opacity=".25" filter="blur(14px)"/>
+    <line x1="500" y1="0" x2="500" y2="300" stroke="#1a0f06" stroke-width="1.5"/>
+    <circle cx="500" cy="320" r="28" fill="#f3d58a"/>
+    <circle cx="500" cy="320" r="70" fill="#f3d58a" opacity=".3" filter="blur(14px)"/>
+  </g>
+
+  <!-- top vignette -->
+  <rect width="1000" height="300" fill="#140e0a" opacity=".6"/>
+</svg>

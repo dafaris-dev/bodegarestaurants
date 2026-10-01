@@ -1,0 +1,168 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1200" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="int-wall" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2b1f17"/>
+      <stop offset="1" stop-color="#140e0a"/>
+    </linearGradient>
+    <linearGradient id="int-floor" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#4a3220"/>
+      <stop offset="1" stop-color="#1a0f06"/>
+    </linearGradient>
+    <radialGradient id="int-light" cx="50%" cy="25%" r="35%">
+      <stop offset="0" stop-color="#f3d58a" stop-opacity=".55"/>
+      <stop offset=".55" stop-color="#b8864a" stop-opacity=".2"/>
+      <stop offset="1" stop-color="#b8864a" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="int-table" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#d4a764"/>
+      <stop offset=".5" stop-color="#8a5a2a"/>
+      <stop offset="1" stop-color="#3a1a08"/>
+    </linearGradient>
+    <linearGradient id="int-tableTop" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f6c874"/>
+      <stop offset="1" stop-color="#8a5a2a"/>
+    </linearGradient>
+    <radialGradient id="int-plate" cx="50%" cy="50%" r="50%">
+      <stop offset="80%" stop-color="#f6f1e7"/>
+      <stop offset="100%" stop-color="#9a8a6c"/>
+    </radialGradient>
+    <radialGradient id="pendant" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#fde8a6"/>
+      <stop offset=".5" stop-color="#f3d58a"/>
+      <stop offset="1" stop-color="#8a5a2a"/>
+    </radialGradient>
+  </defs>
+
+  <!-- back wall -->
+  <rect width="1000" height="900" fill="url(#int-wall)"/>
+
+  <!-- warm light wash -->
+  <rect width="1000" height="900" fill="url(#int-light)"/>
+
+  <!-- perspective floor -->
+  <polygon points="0,900 1000,900 1000,1200 0,1200" fill="url(#int-floor)"/>
+  <!-- floor planks (perspective) -->
+  <g stroke="#1a0f06" stroke-width="1" opacity=".4">
+    <line x1="100" y1="900" x2="-100" y2="1200"/>
+    <line x1="300" y1="900" x2="200" y2="1200"/>
+    <line x1="500" y1="900" x2="500" y2="1200"/>
+    <line x1="700" y1="900" x2="800" y2="1200"/>
+    <line x1="900" y1="900" x2="1100" y2="1200"/>
+  </g>
+
+  <!-- back wall shelf / wine rack -->
+  <g transform="translate(140 220)">
+    <rect x="0" y="0" width="720" height="12" fill="#3a2a1a"/>
+    <rect x="0" y="150" width="720" height="12" fill="#3a2a1a"/>
+    <rect x="0" y="300" width="720" height="12" fill="#3a2a1a"/>
+    <!-- bottles row 1 -->
+    <g>
+      <rect x="40"  y="40" width="22" height="110" rx="4" fill="#3a1a1a"/>
+      <rect x="80"  y="40" width="22" height="110" rx="4" fill="#2a3a1a"/>
+      <rect x="120" y="40" width="22" height="110" rx="4" fill="#3a1a1a"/>
+      <rect x="160" y="40" width="22" height="110" rx="4" fill="#4a2a0a"/>
+      <rect x="200" y="40" width="22" height="110" rx="4" fill="#2a1a3a"/>
+      <rect x="240" y="40" width="22" height="110" rx="4" fill="#3a1a1a"/>
+      <rect x="280" y="40" width="22" height="110" rx="4" fill="#2a3a1a"/>
+      <rect x="320" y="40" width="22" height="110" rx="4" fill="#3a1a1a"/>
+      <rect x="360" y="40" width="22" height="110" rx="4" fill="#4a2a0a"/>
+      <rect x="400" y="40" width="22" height="110" rx="4" fill="#2a1a3a"/>
+      <rect x="440" y="40" width="22" height="110" rx="4" fill="#3a1a1a"/>
+      <rect x="480" y="40" width="22" height="110" rx="4" fill="#2a3a1a"/>
+      <rect x="520" y="40" width="22" height="110" rx="4" fill="#3a1a1a"/>
+      <rect x="560" y="40" width="22" height="110" rx="4" fill="#4a2a0a"/>
+      <rect x="600" y="40" width="22" height="110" rx="4" fill="#2a3a1a"/>
+      <rect x="640" y="40" width="22" height="110" rx="4" fill="#3a1a1a"/>
+      <rect x="680" y="40" width="22" height="110" rx="4" fill="#2a1a3a"/>
+    </g>
+    <!-- bottles row 2 -->
+    <g transform="translate(0 150)">
+      <rect x="40"  y="40" width="22" height="110" rx="4" fill="#2a3a1a"/>
+      <rect x="80"  y="40" width="22" height="110" rx="4" fill="#3a1a1a"/>
+      <rect x="120" y="40" width="22" height="110" rx="4" fill="#4a2a0a"/>
+      <rect x="160" y="40" width="22" height="110" rx="4" fill="#2a1a3a"/>
+      <rect x="200" y="40" width="22" height="110" rx="4" fill="#3a1a1a"/>
+      <rect x="240" y="40" width="22" height="110" rx="4" fill="#2a3a1a"/>
+      <rect x="280" y="40" width="22" height="110" rx="4" fill="#3a1a1a"/>
+      <rect x="320" y="40" width="22" height="110" rx="4" fill="#4a2a0a"/>
+      <rect x="360" y="40" width="22" height="110" rx="4" fill="#2a3a1a"/>
+      <rect x="400" y="40" width="22" height="110" rx="4" fill="#3a1a1a"/>
+      <rect x="440" y="40" width="22" height="110" rx="4" fill="#2a1a3a"/>
+      <rect x="480" y="40" width="22" height="110" rx="4" fill="#3a1a1a"/>
+      <rect x="520" y="40" width="22" height="110" rx="4" fill="#2a3a1a"/>
+      <rect x="560" y="40" width="22" height="110" rx="4" fill="#4a2a0a"/>
+      <rect x="600" y="40" width="22" height="110" rx="4" fill="#3a1a1a"/>
+      <rect x="640" y="40" width="22" height="110" rx="4" fill="#2a1a3a"/>
+      <rect x="680" y="40" width="22" height="110" rx="4" fill="#2a3a1a"/>
+    </g>
+  </g>
+
+  <!-- pendant lamps -->
+  <g>
+    <line x1="300" y1="0" x2="300" y2="140" stroke="#1a0f06" stroke-width="2"/>
+    <path d="M260 140 L 340 140 L 325 200 L 275 200 Z" fill="#1a0f06"/>
+    <ellipse cx="300" cy="205" rx="25" ry="8" fill="url(#pendant)"/>
+    <circle cx="300" cy="205" r="35" fill="#f3d58a" opacity=".3" filter="blur(10px)"/>
+
+    <line x1="700" y1="0" x2="700" y2="140" stroke="#1a0f06" stroke-width="2"/>
+    <path d="M660 140 L 740 140 L 725 200 L 675 200 Z" fill="#1a0f06"/>
+    <ellipse cx="700" cy="205" rx="25" ry="8" fill="url(#pendant)"/>
+    <circle cx="700" cy="205" r="35" fill="#f3d58a" opacity=".3" filter="blur(10px)"/>
+  </g>
+
+  <!-- dining table in foreground (perspective) -->
+  <g>
+    <!-- table shadow -->
+    <ellipse cx="500" cy="990" rx="420" ry="20" fill="#000" opacity=".6"/>
+    <!-- table side -->
+    <polygon points="80,920 920,920 870,980 130,980" fill="url(#int-table)"/>
+    <!-- table top -->
+    <polygon points="80,920 920,920 970,860 30,860" fill="url(#int-tableTop)"/>
+    <!-- wood grain -->
+    <g stroke="#5a3214" stroke-width="1" opacity=".5">
+      <line x1="90" y1="880" x2="920" y2="880"/>
+      <line x1="100" y1="900" x2="910" y2="900"/>
+      <line x1="110" y1="910" x2="900" y2="910"/>
+    </g>
+    <!-- table edge highlight -->
+    <line x1="30" y1="860" x2="970" y2="860" stroke="#fde8a6" stroke-width="2" opacity=".4"/>
+
+    <!-- place setting left -->
+    <g transform="translate(260 880)">
+      <ellipse cx="0" cy="20" rx="90" ry="18" fill="#000" opacity=".3"/>
+      <ellipse cx="0" cy="0" rx="90" ry="20" fill="url(#int-plate)"/>
+      <ellipse cx="0" cy="-2" rx="72" ry="14" fill="#ebe2d1"/>
+      <!-- small bowl -->
+      <ellipse cx="0" cy="-5" rx="30" ry="7" fill="#8e2e2e" opacity=".7"/>
+    </g>
+
+    <!-- place setting right -->
+    <g transform="translate(740 880)">
+      <ellipse cx="0" cy="20" rx="90" ry="18" fill="#000" opacity=".3"/>
+      <ellipse cx="0" cy="0" rx="90" ry="20" fill="url(#int-plate)"/>
+      <ellipse cx="0" cy="-2" rx="72" ry="14" fill="#ebe2d1"/>
+      <ellipse cx="0" cy="-5" rx="30" ry="7" fill="#8e2e2e" opacity=".7"/>
+    </g>
+
+    <!-- center candle -->
+    <g transform="translate(500 850)">
+      <rect x="-6" y="0" width="12" height="40" fill="#2a1d12"/>
+      <ellipse cx="0" cy="40" rx="12" ry="4" fill="#1a0f06"/>
+      <path d="M-2 -4 Q 0 -14 2 -4" fill="#f6b35a">
+        <animate attributeName="opacity" values=".9;.7;.9" dur="2s" repeatCount="indefinite"/>
+      </path>
+      <circle cx="0" cy="-4" r="18" fill="#f6b35a" opacity=".4" filter="blur(6px)">
+        <animate attributeName="opacity" values=".4;.25;.4" dur="2s" repeatCount="indefinite"/>
+      </circle>
+    </g>
+  </g>
+
+  <!-- chair silhouettes -->
+  <g fill="#1a0f06" opacity=".9">
+    <rect x="100" y="950" width="80" height="200" rx="6"/>
+    <rect x="820" y="950" width="80" height="200" rx="6"/>
+  </g>
+
+  <!-- ambient top vignette -->
+  <rect width="1000" height="200" fill="url(#int-wall)" opacity=".6"/>
+</svg>
