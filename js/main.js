@@ -13,14 +13,20 @@
 
   // Mobile drawer
   const burger = document.querySelector('.burger');
+  const drawer = document.querySelector('.drawer');
+  const setMenu = (open) => {
+    document.body.classList.toggle('menu-open', open);
+    if (burger) burger.setAttribute('aria-expanded', String(open));
+    if (drawer) drawer.setAttribute('aria-hidden', String(!open));
+  };
   if (burger) {
-    burger.addEventListener('click', () => {
-      document.body.classList.toggle('menu-open');
-      burger.setAttribute('aria-expanded', document.body.classList.contains('menu-open'));
-    });
+    burger.addEventListener('click', () => setMenu(!document.body.classList.contains('menu-open')));
   }
   document.querySelectorAll('.drawer a').forEach((a) => {
-    a.addEventListener('click', () => document.body.classList.remove('menu-open'));
+    a.addEventListener('click', () => setMenu(false));
+  });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && document.body.classList.contains('menu-open')) setMenu(false);
   });
 
   // Reveal on scroll

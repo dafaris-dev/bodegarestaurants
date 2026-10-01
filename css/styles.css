@@ -149,15 +149,55 @@ body.menu-open .nav .burger span::after  { transform: translateY(-6px) rotate(-4
 
 /* Mobile drawer */
 .drawer {
-  position: fixed; inset: 0; z-index: 45; background: var(--ink); color: var(--paper);
-  transform: translateY(-100%); transition: transform .5s var(--ease);
-  display: flex; flex-direction: column; justify-content: center; padding: 6rem var(--gutter) 3rem;
+  position: fixed; inset: 0; z-index: 45;
+  background: #0f0d0b;
+  color: var(--paper);
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(-2%);
+  transition: opacity .45s var(--ease), transform .5s var(--ease), visibility 0s linear .45s;
+  display: flex; flex-direction: column; justify-content: flex-start;
+  padding: 5.5rem var(--gutter) 6rem;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
 }
-body.menu-open .drawer { transform: translateY(0); }
-.drawer ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 1.25rem; }
-.drawer li a { font-family: var(--serif); font-size: clamp(2rem, 7vw, 3.5rem); letter-spacing: -.01em; }
-.drawer .meta { margin-top: 2.5rem; display: grid; gap: .5rem; font-size: .9rem; color: var(--cream); }
-.drawer .meta a { border-bottom: 1px solid var(--line-light); padding-block: .25rem; display:inline-block; }
+body.menu-open .drawer {
+  transform: translateY(0);
+  opacity: 1;
+  visibility: visible;
+  transition: opacity .45s var(--ease), transform .5s var(--ease), visibility 0s linear 0s;
+}
+body.menu-open { overflow: hidden; }
+
+.drawer ul { list-style: none; padding: 0; margin: 0; display: grid; gap: .25rem; }
+.drawer li a {
+  font-family: var(--serif);
+  font-size: clamp(1.5rem, 5.5vw, 2.4rem);
+  line-height: 1.15;
+  letter-spacing: -.01em;
+  display: block;
+  padding: .55rem 0;
+  border-bottom: 1px solid var(--line-light);
+  transition: color .3s var(--ease), padding .3s var(--ease);
+}
+.drawer li:last-child a { border-bottom: 0; }
+.drawer li a:hover,
+.drawer li a[aria-current="page"] { color: var(--gold); padding-left: .5rem; }
+
+.drawer .meta {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--line-light);
+  display: grid; gap: .4rem;
+  font-size: .9rem; color: var(--cream);
+}
+.drawer .meta a { padding-block: .4rem; display:inline-block; }
+.drawer .meta a:hover { color: var(--paper); }
+
+@media (min-height: 720px) {
+  .drawer { justify-content: center; }
+}
 
 /* Mobile sticky bottom CTA */
 .mobile-sticky {
