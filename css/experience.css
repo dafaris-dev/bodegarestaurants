@@ -758,9 +758,9 @@ body.menu-open .nav-pill .pill-burger span::after  { transform: translateY(-5px)
 }
 .enter .bg-shot {
   position: absolute; inset: 0;
-  background-image: linear-gradient(180deg, rgba(10,8,6,.4), rgba(10,8,6,.85)), url('../images/story-modern.svg');
+  background-image: linear-gradient(180deg, rgba(10,8,6,.55), rgba(10,8,6,.9)), url('../images/photo-interior.jpg');
   background-size: cover; background-position: center;
-  filter: brightness(.6) contrast(1.1);
+  filter: brightness(.75) contrast(1.05) saturate(1.1);
   z-index: 1;
 }
 .enter .inner {
