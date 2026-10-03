@@ -746,28 +746,23 @@ body.menu-open .nav-pill .pill-burger span::after  { transform: translateY(-5px)
 }
 .scatter-grid .shot:hover .cap { opacity: 1; transform: translateY(0); }
 
-/* Editorial layout — 12-col grid, 2 rows */
-.scatter-grid .s1 { grid-column: span 7; grid-row: 1; aspect-ratio: 4/3; }        /* interior wide */
-.scatter-grid .s2 { grid-column: span 5; grid-row: 1 / span 2; aspect-ratio: 3/5; }/* bar portrait, tall across 2 rows */
-.scatter-grid .s3 { grid-column: span 3; grid-row: 2; aspect-ratio: 1/1; }         /* meatballs */
-.scatter-grid .s4 { grid-column: span 2; grid-row: 2; aspect-ratio: 1/1; }         /* bokchoy */
-.scatter-grid .s5 { grid-column: span 2; grid-row: 2; aspect-ratio: 1/1; }         /* cocktails */
+/* Editorial 3-photo layout — center hero flanked by two squares */
+.scatter-grid .s1 { grid-column: span 3; grid-row: 1; aspect-ratio: 1/1; }   /* meatballs — left square */
+.scatter-grid .s2 { grid-column: span 6; grid-row: 1; aspect-ratio: 4/3; }   /* interior — center hero */
+.scatter-grid .s3 { grid-column: span 3; grid-row: 1; aspect-ratio: 1/1; }   /* cocktails — right square */
 
 /* Tablet */
 @media (max-width: 1024px){
-  .scatter-grid .s1 { grid-column: span 7; aspect-ratio: 16/10; }
-  .scatter-grid .s2 { grid-column: span 5; aspect-ratio: 3/5; }
-  .scatter-grid .s3 { grid-column: span 3; }
-  .scatter-grid .s4 { grid-column: span 2; }
-  .scatter-grid .s5 { grid-column: span 2; }
+  .scatter-grid .s1 { grid-column: span 4; aspect-ratio: 1/1; }
+  .scatter-grid .s2 { grid-column: span 12; grid-row: 2; aspect-ratio: 16/9; }
+  .scatter-grid .s3 { grid-column: span 4; aspect-ratio: 1/1; }
+  .scatter-grid .s1, .scatter-grid .s3 { grid-row: 1; grid-column: span 6; }
 }
 
 /* Mobile */
 @media (max-width: 720px){
-  .scatter-grid { grid-template-columns: 1fr 1fr; gap: .75rem; }
-  .scatter-grid .shot { grid-column: span 1 !important; grid-row: auto !important; aspect-ratio: 1 !important; }
-  .scatter-grid .s1 { grid-column: span 2 !important; aspect-ratio: 4/3 !important; }
-  .scatter-grid .s2 { grid-column: span 2 !important; aspect-ratio: 4/5 !important; }
+  .scatter-grid { grid-template-columns: 1fr; gap: .75rem; }
+  .scatter-grid .shot { grid-column: span 1 !important; grid-row: auto !important; aspect-ratio: 4/3 !important; }
 }
 
 /* ---------- PRESS editorial strip ---------- */
