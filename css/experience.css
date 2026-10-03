@@ -156,18 +156,20 @@ body.menu-open .nav-pill .pill-burger span::after  { transform: translateY(-5px)
   user-select: none;
 }
 
-/* foreground split headline */
+/* foreground split headline — upper-left, out of the cards' way */
 .hero-scene .headline {
-  position: absolute; inset: 0;
+  position: absolute;
+  top: clamp(5rem, 15vh, 10rem);
+  left: clamp(1.5rem, 5vw, 5rem);
+  right: clamp(1.5rem, 5vw, 5rem);
   display: flex; flex-direction: column;
-  justify-content: center;
-  padding: 7rem clamp(1.5rem, 5vw, 5rem) 4rem;
   z-index: 10;
   transform-style: preserve-3d;
+  pointer-events: none;
 }
 .hero-scene .headline .line {
   font-family: var(--serif);
-  font-size: clamp(4rem, 15vw, 15rem);
+  font-size: clamp(3.5rem, 13vw, 13rem);
   line-height: .85;
   letter-spacing: -.04em;
   color: var(--paper2);
@@ -177,7 +179,7 @@ body.menu-open .nav-pill .pill-burger span::after  { transform: translateY(-5px)
 .hero-scene .headline .line.l1 { transform: translateZ(80px); font-style: normal; }
 .hero-scene .headline .line.l2 {
   transform: translateZ(60px);
-  margin-left: clamp(2rem, 8vw, 8rem);
+  margin-left: clamp(1.5rem, 6vw, 6rem);
   font-style: italic;
   background: linear-gradient(180deg, #f6f1e7 0%, #d7c9b0 50%, #b8864a 100%);
   -webkit-background-clip: text; background-clip: text;
@@ -206,43 +208,62 @@ body.menu-open .nav-pill .pill-burger span::after  { transform: translateY(-5px)
   .hero-scene .bowl { right: -30%; top: 30%; width: 110vw; opacity: .4; }
 }
 
-/* Floating meta "cards" at different depths */
-.hero-scene .float-card {
+/* Floating meta strip — single horizontal row at bottom, cards don't collide */
+.hero-scene .meta-strip {
   position: absolute;
+  left: clamp(1.5rem, 5vw, 5rem);
+  right: clamp(1.5rem, 5vw, 5rem);
+  bottom: 8.5rem;
   z-index: 12;
-  padding: 1.1rem 1.5rem;
-  background: rgba(246,241,231,.04);
-  backdrop-filter: blur(18px);
-  -webkit-backdrop-filter: blur(18px);
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  max-width: 820px;
+  transform-style: preserve-3d;
+  pointer-events: none;
+}
+.hero-scene .float-card {
+  padding: 1rem 1.25rem;
+  background: rgba(10,8,6,.55);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
   border: 1px solid rgba(246,241,231,.1);
   box-shadow: 0 20px 60px -20px rgba(0,0,0,.5), inset 0 1px 0 rgba(255,255,255,.08);
   color: var(--paper2);
   will-change: transform;
-  max-width: 240px;
+  pointer-events: auto;
 }
 .hero-scene .float-card .lbl {
-  font-size: .62rem; letter-spacing: .3em; text-transform: uppercase;
+  font-size: .6rem; letter-spacing: .3em; text-transform: uppercase;
   color: var(--gold2); margin-bottom: .4rem;
 }
 .hero-scene .float-card .val {
-  font-family: var(--serif); font-size: 1rem; line-height: 1.3;
+  font-family: var(--serif); font-size: .95rem; line-height: 1.3;
 }
+.hero-scene .fc-address { transform: rotateY(2deg) rotateX(-1deg); }
+.hero-scene .fc-hours   { transform: rotateY(0deg) rotateX(-1deg); }
+.hero-scene .fc-dinner  { transform: rotateY(-2deg) rotateX(-1deg); }
 
-.hero-scene .fc-address { left: clamp(1.5rem, 5vw, 5rem); bottom: 20%; transform: rotateY(6deg) rotateX(-2deg); }
-.hero-scene .fc-hours   { left: clamp(14rem, 24vw, 28rem); bottom: 10%; transform: rotateY(4deg) rotateX(-3deg); }
-.hero-scene .fc-dinner  { right: clamp(1.5rem, 5vw, 5rem); top: 28%; transform: rotateY(-6deg) rotateX(-2deg); }
 @media (max-width: 900px){
-  .hero-scene .fc-address { left: 1.25rem; bottom: 32%; transform: none; max-width: 60vw; }
+  .hero-scene .meta-strip {
+    grid-template-columns: 1fr;
+    max-width: 320px;
+    bottom: 10.5rem;
+    gap: .5rem;
+  }
   .hero-scene .fc-hours { display: none; }
-  .hero-scene .fc-dinner { right: 1.25rem; top: 24%; transform: none; max-width: 60vw; }
+  .hero-scene .fc-address, .hero-scene .fc-dinner { transform: none; }
+}
+@media (max-height: 760px){
+  .hero-scene .meta-strip { bottom: 7.5rem; }
 }
 
-/* Floating RESERVE CTA — dimensional pill */
+/* Floating CTA stack — bottom-left, below the strip */
 .hero-scene .cta-stack {
   position: absolute; z-index: 14;
   left: clamp(1.5rem, 5vw, 5rem);
-  bottom: 2.5rem;
-  display: flex; gap: 1rem; align-items: center; flex-wrap: wrap;
+  bottom: 2rem;
+  display: flex; gap: .75rem; align-items: center; flex-wrap: wrap;
   transform: translateZ(100px);
 }
 .hero-scene .cta-stack a {

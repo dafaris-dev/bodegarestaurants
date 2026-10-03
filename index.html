@@ -94,18 +94,20 @@
       <span class="line l2">SF<em>.</em></span>
     </h1>
 
-    <!-- floating info cards -->
-    <div class="float-card fc-address">
-      <div class="lbl">Address</div>
-      <div class="val">138 Mason St.<br>San Francisco, CA 94102</div>
-    </div>
-    <div class="float-card fc-hours">
-      <div class="lbl">Brunch / Lunch</div>
-      <div class="val">11 AM – 3 PM · Daily</div>
-    </div>
-    <div class="float-card fc-dinner">
-      <div class="lbl">Dinner</div>
-      <div class="val">5 – 10 PM · Sun – Thu<br>5 – 10:30 PM · Fri / Sat</div>
+    <!-- floating meta strip (single row at bottom) -->
+    <div class="meta-strip">
+      <div class="float-card fc-address">
+        <div class="lbl">Address</div>
+        <div class="val">138 Mason St.<br>San Francisco, CA 94102</div>
+      </div>
+      <div class="float-card fc-hours">
+        <div class="lbl">Brunch / Lunch</div>
+        <div class="val">11 AM – 3 PM<br>Daily</div>
+      </div>
+      <div class="float-card fc-dinner">
+        <div class="lbl">Dinner</div>
+        <div class="val">5 – 10 PM · Sun – Thu<br>5 – 10:30 PM · Fri / Sat</div>
+      </div>
     </div>
 
     <!-- CTA stack -->
@@ -423,7 +425,7 @@
           const bowl = hero.querySelector('.bowl');
           const mega = hero.querySelector('.mega');
           const headline = hero.querySelector('.headline');
-          const fcs = hero.querySelectorAll('.float-card');
+          const strip = hero.querySelector('.meta-strip');
           const shafts = hero.querySelectorAll('.shaft');
           let raf = null, tx = 0, ty = 0, cx = 0, cy = 0;
           const upd = () => {
@@ -431,11 +433,7 @@
             if (bowl)     bowl.style.transform     = `translate3d(${cx*30}px, ${cy*20}px, 0) rotateX(${14+cy*-3}deg) rotateY(${cx*5}deg) rotateZ(-8deg)`;
             if (mega)     mega.style.transform     = `translate(-50%, -50%) translate3d(${cx*-20}px, ${cy*-15}px, 0)`;
             if (headline) headline.style.transform = `translate3d(${cx*-10}px, ${cy*-8}px, 0)`;
-            fcs.forEach((fc, i) => {
-              const d = (i+1)*8;
-              const base = fc.dataset.base || '';
-              fc.style.transform = `translate3d(${cx*d}px, ${cy*d}px, 0) ${base}`;
-            });
+            if (strip)    strip.style.transform    = `translate3d(${cx*8}px, ${cy*6}px, 0)`;
             shafts.forEach((s, i) => {
               const d = (i+1)*12;
               const rot = s.dataset.rot || '';
@@ -444,11 +442,6 @@
             if (Math.abs(tx-cx) > 0.001 || Math.abs(ty-cy) > 0.001) raf = requestAnimationFrame(upd);
             else raf = null;
           };
-          // store base transforms
-          hero.querySelectorAll('.float-card').forEach(fc => {
-            const cs = getComputedStyle(fc).transform;
-            if (cs && cs !== 'none') fc.dataset.base = fc.className.includes('fc-address') ? 'rotateY(6deg) rotateX(-2deg)' : fc.className.includes('fc-hours') ? 'rotateY(4deg) rotateX(-3deg)' : 'rotateY(-6deg) rotateX(-2deg)';
-          });
           hero.querySelectorAll('.shaft').forEach((s, i) => {
             s.dataset.rot = i === 0 ? 'rotate(12deg)' : i === 1 ? 'rotate(-8deg)' : 'rotate(10deg)';
           });
