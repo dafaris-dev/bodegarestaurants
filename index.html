@@ -235,7 +235,7 @@
         <div class="card">
           <div class="r-head">
             <div class="brand">Bodega SF</div>
-            <div class="num">RES. CARD · 2024</div>
+            <div class="num">RES. CARD · <span data-year>2026</span></div>
           </div>
           <div class="row"><span class="k">Booking Window</span><span class="v">30 Days Ahead</span></div>
           <div class="row"><span class="k">Party Size</span><span class="v">Up to 8 · OpenTable</span></div>
@@ -435,9 +435,9 @@
         window.addEventListener('scroll', () => { if (!praf) praf = requestAnimationFrame(pupdate); }, { passive: true });
       }
 
-      // Year
-      const yEl = document.querySelector('[data-year]');
-      if (yEl) yEl.textContent = new Date().getFullYear();
+      // Year (updates every element with data-year)
+      const y = new Date().getFullYear();
+      document.querySelectorAll('[data-year]').forEach(el => el.textContent = y);
     })();
   </script>
 </body>
