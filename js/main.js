@@ -142,9 +142,9 @@
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
 
-  // ---------- Mobile drawer ----------
-  const burger = document.querySelector('.burger');
-  const drawer = document.querySelector('.drawer');
+  // ---------- Mobile drawer (works for old .burger/.drawer and new .pill-burger/.exp-drawer) ----------
+  const burger = document.querySelector('.burger, .pill-burger');
+  const drawer = document.querySelector('.drawer, .exp-drawer');
   const setMenu = (open) => {
     document.body.classList.toggle('menu-open', open);
     if (burger) burger.setAttribute('aria-expanded', String(open));
@@ -153,7 +153,7 @@
   if (burger) {
     burger.addEventListener('click', () => setMenu(!document.body.classList.contains('menu-open')));
   }
-  document.querySelectorAll('.drawer a').forEach((a) => {
+  document.querySelectorAll('.drawer a, .exp-drawer a').forEach((a) => {
     a.addEventListener('click', () => setMenu(false));
   });
   document.addEventListener('keydown', (e) => {
@@ -230,7 +230,7 @@
 
   // ---------- Active nav link ----------
   const path = location.pathname.split('/').pop() || 'index.html';
-  document.querySelectorAll('.nav a, .drawer a').forEach((a) => {
+  document.querySelectorAll('.nav a, .drawer a, .nav-pill a, .exp-drawer a').forEach((a) => {
     const href = a.getAttribute('href');
     if (href === path) a.setAttribute('aria-current', 'page');
   });

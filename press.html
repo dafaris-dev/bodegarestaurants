@@ -11,27 +11,28 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Inter:wght@300;400;500;600&display=swap" />
   <link rel="stylesheet" href="css/styles.css" />
   <link rel="stylesheet" href="css/depth.css" />
+  <link rel="stylesheet" href="css/experience.css" />
 </head>
 <body>
 
-  <header class="nav scrolled" role="banner">
-    <a href="index.html" class="brand">BODEGA SF</a>
-    <nav aria-label="Primary"><ul class="primary">
-      <li><a href="menu.html">Menu</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="reservations.html">Reservations</a></li>
-      <li><a href="private-events.html">Private Events</a></li>
-      <li><a href="catering.html">Catering</a></li>
-      <li><a href="faq.html">FAQ</a></li>
-      <li><a href="shop.html">Shop</a></li>
-    </ul></nav>
-    <div class="cta-wrap">
-      <a class="btn accent inline-reserve" href="https://www.opentable.com/r/bodega-sf-san-francisco" target="_blank" rel="noopener">Reserve</a>
-      <button class="burger" aria-label="Open menu" aria-expanded="false"><span></span></button>
-    </div>
+<!-- ===== Floating pill nav ===== -->
+  <header class="nav-pill" role="banner">
+    <a href="index.html" class="pill-brand">Bodega SF</a>
+    <nav class="pill-links" aria-label="Primary">
+      <a href="menu.html">Menu</a>
+      <a href="about.html">About</a>
+      <a href="reservations.html">Reservations</a>
+      <a href="private-events.html">Events</a>
+      <a href="catering.html">Catering</a>
+      <a href="faq.html">FAQ</a>
+      <a href="shop.html">Shop</a>
+    </nav>
+    <a class="pill-cta" href="https://www.opentable.com/r/bodega-sf-san-francisco" target="_blank" rel="noopener">Reserve</a>
+    <button class="pill-burger" aria-label="Open menu" aria-expanded="false"><span></span></button>
   </header>
 
-  <aside class="drawer" aria-hidden="true">
+  <!-- Drawer -->
+  <aside class="exp-drawer" aria-hidden="true">
     <ul>
       <li><a href="menu.html">Menu</a></li>
       <li><a href="about.html">About</a></li>
@@ -94,45 +95,28 @@
     </div>
   </section>
 
-  <footer>
-    <div class="container">
-      <div class="footer-grid">
-        <div>
-          <div class="brandline">BODEGA SF</div>
-          <p>138 Mason St.<br>San Francisco, CA 94102</p>
-          <p><a href="tel:+14156559341">+1 415-655-9341</a><br>
-             <a href="sms:+14159186831">+1 415-918-6831 (text)</a><br>
-             <a href="mailto:info@bodegarestaurants.com">info@bodegarestaurants.com</a></p>
-        </div>
-        <div><h5>Visit</h5><ul>
-          <li><a href="menu.html">Menu</a></li>
-          <li><a href="reservations.html">Reservations</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul></div>
-        <div><h5>Experience</h5><ul>
-          <li><a href="private-events.html">Private Events</a></li>
-          <li><a href="catering.html">Catering</a></li>
-          <li><a href="shop.html">Shop</a></li>
-          <li><a href="press.html">Press</a></li>
-        </ul></div>
-        <div><h5>Guest Services</h5><ul>
-          <li><a href="faq.html">FAQs</a></li>
-          <li><a href="https://www.opentable.com/r/bodega-sf-san-francisco" target="_blank" rel="noopener">Reserve on OpenTable</a></li>
-          <li><a href="https://www.google.com/maps/dir/?api=1&destination=138+Mason+St,San+Francisco,CA+94102" target="_blank" rel="noopener">Get Directions</a></li>
-        </ul></div>
+  <!-- ===== Footer — minimal ===== -->
+  <footer class="exp-footer">
+    <div class="inner-min">
+      <div class="f-left">
+        <div class="brand">BODEGA SF</div>
+        <p>138 Mason St. · San Francisco, CA 94102<br>
+           <a href="tel:+14156559341">+1 415-655-9341</a> · <a href="mailto:info@bodegarestaurants.com">info@bodegarestaurants.com</a></p>
       </div>
-      <div class="footer-base">
-        <span>© <span data-year>2026</span> Bodega SF. All rights reserved.</span>
-        <span><a href="#">Privacy Policy</a><a href="#">Accessibility</a></span>
-      </div>
+      <nav class="f-nav" aria-label="Footer">
+        <a href="menu.html">Menu</a>
+        <a href="reservations.html">Reservations</a>
+        <a href="about.html">About</a>
+        <a href="faq.html">FAQ</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+    <div class="base">
+      <span>© <span data-year>2026</span> Bodega SF</span>
+      <span><a href="#">Privacy</a><a href="#">Accessibility</a></span>
     </div>
   </footer>
 
-  <nav class="mobile-sticky" aria-label="Mobile actions">
-    <a href="https://www.opentable.com/r/bodega-sf-san-francisco" target="_blank" rel="noopener">Reserve</a>
-    <a href="menu.html">Menu</a>
-  </nav>
 
   <script src="js/main.js" defer></script>
 </body>
